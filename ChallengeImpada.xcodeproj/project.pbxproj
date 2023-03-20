@@ -53,6 +53,11 @@
 			children = (
 				E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */,
 				E91A580329C8F67E0055EDB3 /* ContentView.swift */,
+				E91A582729C8F8700055EDB3 /* Models */,
+				E91A580F29C8F7280055EDB3 /* Core */,
+				E91A582629C8F8380055EDB3 /* Extensions */,
+				E91A582529C8F8320055EDB3 /* Utilities */,
+				E91A582929C8F8860055EDB3 /* Services */,
 				E91A580529C8F67F0055EDB3 /* Assets.xcassets */,
 				E91A580729C8F67F0055EDB3 /* Preview Content */,
 			);
@@ -65,6 +70,201 @@
 				E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E91A580F29C8F7280055EDB3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E91A582429C8F8290055EDB3 /* Components */,
+				E91A581329C8F7970055EDB3 /* Minigames */,
+				E91A581229C8F74A0055EDB3 /* LevelSelection */,
+				E91A581129C8F7420055EDB3 /* Credits */,
+				E91A581029C8F72F0055EDB3 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E91A581029C8F72F0055EDB3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E91A581829C8F7C20055EDB3 /* Viewmodel */,
+				E91A581729C8F7BB0055EDB3 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E91A581129C8F7420055EDB3 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				E91A581A29C8F7D20055EDB3 /* Viewmodel */,
+				E91A581929C8F7CC0055EDB3 /* Views */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		E91A581229C8F74A0055EDB3 /* LevelSelection */ = {
+			isa = PBXGroup;
+			children = (
+				E91A581C29C8F7DF0055EDB3 /* Viewmodel */,
+				E91A581B29C8F7DA0055EDB3 /* Views */,
+			);
+			path = LevelSelection;
+			sourceTree = "<group>";
+		};
+		E91A581329C8F7970055EDB3 /* Minigames */ = {
+			isa = PBXGroup;
+			children = (
+				E91A581629C8F7B10055EDB3 /* DaVinci */,
+				E91A581529C8F7A70055EDB3 /* Turing */,
+				E91A581429C8F79F0055EDB3 /* Newton */,
+			);
+			path = Minigames;
+			sourceTree = "<group>";
+		};
+		E91A581429C8F79F0055EDB3 /* Newton */ = {
+			isa = PBXGroup;
+			children = (
+				E91A582329C8F81A0055EDB3 /* Viewmodel */,
+				E91A582229C8F8140055EDB3 /* View */,
+			);
+			path = Newton;
+			sourceTree = "<group>";
+		};
+		E91A581529C8F7A70055EDB3 /* Turing */ = {
+			isa = PBXGroup;
+			children = (
+				E91A582129C8F80D0055EDB3 /* Viewmodel */,
+				E91A582029C8F8080055EDB3 /* Views */,
+			);
+			path = Turing;
+			sourceTree = "<group>";
+		};
+		E91A581629C8F7B10055EDB3 /* DaVinci */ = {
+			isa = PBXGroup;
+			children = (
+				E91A581F29C8F7FD0055EDB3 /* Viewmodel */,
+				E91A581D29C8F7ED0055EDB3 /* Views */,
+			);
+			path = DaVinci;
+			sourceTree = "<group>";
+		};
+		E91A581729C8F7BB0055EDB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E91A581829C8F7C20055EDB3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		E91A581929C8F7CC0055EDB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E91A581A29C8F7D20055EDB3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		E91A581B29C8F7DA0055EDB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E91A581C29C8F7DF0055EDB3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		E91A581D29C8F7ED0055EDB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E91A581F29C8F7FD0055EDB3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		E91A582029C8F8080055EDB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E91A582129C8F80D0055EDB3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		E91A582229C8F8140055EDB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E91A582329C8F81A0055EDB3 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		E91A582429C8F8290055EDB3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E91A582529C8F8320055EDB3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E91A582629C8F8380055EDB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E91A582729C8F8700055EDB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E91A582929C8F8860055EDB3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
