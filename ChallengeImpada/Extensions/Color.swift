@@ -17,5 +17,6 @@ struct ColorTheme {
     
     let primary = Color("PrimaryColor")
     let secondary = Color("SecondaryColor")
+    let accent = Color("AccentColor")
     
 }
