@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4946EE129D37CE70045F4BF /* HomeComponents.swift */; };
 		E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */; };
 		E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580329C8F67E0055EDB3 /* ContentView.swift */; };
 		E91A580629C8F67F0055EDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580529C8F67F0055EDB3 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4946EE129D37CE70045F4BF /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		E91A57FE29C8F67E0055EDB3 /* ChallengeImpada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeImpada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeImpadaApp.swift; sourceTree = "<group>"; };
 		E91A580329C8F67E0055EDB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				E974C2AC29D369B500F2D592 /* HomeView.swift */,
+				A4946EE129D37CE70045F4BF /* HomeComponents.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				E974C2AB29D360FA00F2D592 /* Color.swift in Sources */,
 				E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */,
 				E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */,
+				A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */,
 				E974C2C329D36A4200F2D592 /* NewtonView.swift in Sources */,
 				E974C2B929D36A0500F2D592 /* DaVinciView.swift in Sources */,
 				E974C2BB29D36A1000F2D592 /* DaVinciViewModel.swift in Sources */,
