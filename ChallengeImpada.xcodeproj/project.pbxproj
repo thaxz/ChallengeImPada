@@ -11,6 +11,7 @@
 		E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580329C8F67E0055EDB3 /* ContentView.swift */; };
 		E91A580629C8F67F0055EDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580529C8F67F0055EDB3 /* Assets.xcassets */; };
 		E91A580929C8F67F0055EDB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */; };
+		E974C2AB29D360FA00F2D592 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AA29D360FA00F2D592 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E91A580329C8F67E0055EDB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E91A580529C8F67F0055EDB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E974C2AA29D360FA00F2D592 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 		E91A582629C8F8380055EDB3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E974C2AA29D360FA00F2D592 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */,
 				E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */,
+				E974C2AB29D360FA00F2D592 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
