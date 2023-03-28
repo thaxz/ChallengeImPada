@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Dialogue {
+    
+    let text: [String]
+    let maxIndex: Int
+}
