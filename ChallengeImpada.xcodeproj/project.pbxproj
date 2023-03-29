@@ -12,6 +12,9 @@
 		E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580329C8F67E0055EDB3 /* ContentView.swift */; };
 		E91A580629C8F67F0055EDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580529C8F67F0055EDB3 /* Assets.xcassets */; };
 		E91A580929C8F67F0055EDB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */; };
+		E947446329D4B5B700A3916A /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446229D4B5B700A3916A /* GameCharacter.swift */; };
+		E947446529D4B75E00A3916A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446429D4B75E00A3916A /* Character.swift */; };
+		E947446729D4B86000A3916A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446629D4B86000A3916A /* Scene.swift */; };
 		E974C2AB29D360FA00F2D592 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AA29D360FA00F2D592 /* Color.swift */; };
 		E974C2AD29D369B500F2D592 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AC29D369B500F2D592 /* HomeView.swift */; };
 		E974C2AF29D369C000F2D592 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AE29D369C000F2D592 /* HomeViewModel.swift */; };
@@ -44,6 +47,9 @@
 		E91A580329C8F67E0055EDB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E91A580529C8F67F0055EDB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E947446229D4B5B700A3916A /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
+		E947446429D4B75E00A3916A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E947446629D4B86000A3916A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		E974C2AA29D360FA00F2D592 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E974C2AC29D369B500F2D592 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E974C2AE29D369C000F2D592 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -310,6 +316,7 @@
 			children = (
 				E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */,
 				E974C2D929D37F0300F2D592 /* Data.swift */,
+				E947446229D4B5B700A3916A /* GameCharacter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -326,6 +333,8 @@
 			isa = PBXGroup;
 			children = (
 				E974C2C629D36A5B00F2D592 /* Dialogues.swift */,
+				E947446429D4B75E00A3916A /* Character.swift */,
+				E947446629D4B86000A3916A /* Scene.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,6 +448,7 @@
 				E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */,
 				E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */,
 				E974C2B329D369DA00F2D592 /* CreditsViewModel.swift in Sources */,
+				E947446329D4B5B700A3916A /* GameCharacter.swift in Sources */,
 				E974C2DA29D37F0300F2D592 /* Data.swift in Sources */,
 				E974C2B529D369EB00F2D592 /* LevelSelectionView.swift in Sources */,
 				E974C2B729D369F600F2D592 /* LevelSelectionViewModel.swift in Sources */,
@@ -452,9 +462,11 @@
 				E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */,
 				E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */,
 				A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */,
+				E947446729D4B86000A3916A /* Scene.swift in Sources */,
 				E974C2C329D36A4200F2D592 /* NewtonView.swift in Sources */,
 				E974C2B929D36A0500F2D592 /* DaVinciView.swift in Sources */,
 				E974C2BB29D36A1000F2D592 /* DaVinciViewModel.swift in Sources */,
+				E947446529D4B75E00A3916A /* Character.swift in Sources */,
 				E974C2D829D372C300F2D592 /* CharacterPortrait.swift in Sources */,
 				E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */,
 				E974C2D029D36D7600F2D592 /* DialogueView.swift in Sources */,
@@ -593,8 +605,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,8 +633,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
