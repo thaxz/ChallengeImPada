@@ -12,7 +12,10 @@ struct ChallengeImpadaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

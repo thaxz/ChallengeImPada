@@ -9,13 +9,20 @@ import SwiftUI
 
 struct DialogueView: View {
     @State var index: Int = 0
+    
     var body: some View {
-        ZStack {
-            Color.theme.primary
-                .ignoresSafeArea()
-            VStack {
-                HStack{
+        NavigationStack {
+            ZStack {
+                Color.theme.primary
+                    .ignoresSafeArea()
+                VStack {
+                    HStack{
+                        Spacer()
+                            Button {
+                            } label: { SkipButton() }
+                    }
                     Spacer()
+
                     Button {
                     // skip dialogue
                     } label: { SkipButton() }

@@ -1,27 +1,27 @@
 //
-//  NewtonView.swift
+//  MuseuView.swift
 //  ChallengeImpada
 //
-//  Created by thaxz on 28/03/23.
+//  Created by lss8 on 29/03/23.
 //
 
 import SwiftUI
 
-struct NewtonView: View {
+struct MuseuView: View {
     var body: some View {
         ZStack {
             Color.theme.primary
                 .ignoresSafeArea()
             VStack {
-                Text("Oi sou o Newton")
+                Text("Oi isso é um Museu")
                     .foregroundColor(.white)
             }
         }
     }
 }
 
-struct NewtonView_Previews: PreviewProvider {
+struct MuseuView_Previews: PreviewProvider {
     static var previews: some View {
-        NewtonView()
+        MuseuView()
     }
 }
