@@ -9,7 +9,7 @@ import Foundation
 
 struct Dialogue {
     
-    let data: (text: String, character: GameCharacter)
+    let data: (character: GameCharacter, text: String)
     
 }
 

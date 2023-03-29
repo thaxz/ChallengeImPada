@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ChallengeImpadaApp: App {
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {

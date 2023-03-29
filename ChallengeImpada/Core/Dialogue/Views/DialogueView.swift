@@ -22,18 +22,24 @@ struct DialogueView: View {
                             } label: { SkipButton() }
                     }
                     Spacer()
-                    HStack(alignment: .bottom, spacing: 16){
-                        CharacterPortrait(image: "CharacterPlaceHolder", name: "Newton")
-                        DialogueContainer(text: Data().arquisOnboarding.text[index])
-                            .onTapGesture {
-                                index += 1
-                                if index > Data().arquisOnboarding.maxIndex {
-                                    self.index = 0
-                                    // change game scene
-                                }
-                            }
-                        
-                    }
+
+                    Button {
+                    // skip dialogue
+                    } label: { SkipButton() }
+
+                }
+                Spacer()
+                HStack(alignment: .bottom, spacing: 16){
+                    CharacterPortrait(image: "CharacterPlaceHolder", name: "Newton")
+//                    DialogueContainer(text: Data().arquisOnboarding.text[index])
+//                        .onTapGesture {
+//                            index += 1
+//                            if index > Data().arquisOnboarding.maxIndex {
+//                                self.index = 0
+//                                // change game scene
+//                            }
+//                        }
+                    
                 }
             }
         }
