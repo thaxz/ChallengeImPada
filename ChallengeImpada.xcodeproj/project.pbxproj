@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */; };
+		8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */; };
 		A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4946EE129D37CE70045F4BF /* HomeComponents.swift */; };
 		E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */; };
 		E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580329C8F67E0055EDB3 /* ContentView.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewModel.swift; sourceTree = "<group>"; };
+		8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuView.swift; sourceTree = "<group>"; };
 		A4946EE129D37CE70045F4BF /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		E91A57FE29C8F67E0055EDB3 /* ChallengeImpada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeImpada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeImpadaApp.swift; sourceTree = "<group>"; };
@@ -80,6 +84,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F3EB1E429D4BE900045EEE7 /* Museu */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EB1E629D4BEA30045EEE7 /* Viewmodel */,
+				8F3EB1E529D4BE9C0045EEE7 /* Views */,
+			);
+			path = Museu;
+			sourceTree = "<group>";
+		};
+		8F3EB1E529D4BE9C0045EEE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F3EB1E629D4BEA30045EEE7 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
 		E91A57F529C8F67E0055EDB3 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +157,7 @@
 				E91A581329C8F7970055EDB3 /* Minigames */,
 				E91A581229C8F74A0055EDB3 /* LevelSelection */,
 				E91A581129C8F7420055EDB3 /* Credits */,
+				8F3EB1E429D4BE900045EEE7 /* Museu */,
 				E91A581029C8F72F0055EDB3 /* Home */,
 			);
 			path = Core;
@@ -164,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				E91A581629C8F7B10055EDB3 /* DaVinci */,
-				E91A581529C8F7A70055EDB3 /* Turing */,
 				E91A581429C8F79F0055EDB3 /* Newton */,
+				E91A581529C8F7A70055EDB3 /* Turing */,
 			);
 			path = Minigames;
 			sourceTree = "<group>";
@@ -444,6 +474,7 @@
 				E974C2B729D369F600F2D592 /* LevelSelectionViewModel.swift in Sources */,
 				E974C2B129D369D000F2D592 /* CreditsView.swift in Sources */,
 				E974C2D229D36DA700F2D592 /* DialogueViewModel.swift in Sources */,
+				8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */,
 				E974C2CB29D36A7800F2D592 /* AnyService.swift in Sources */,
 				E974C2AF29D369C000F2D592 /* HomeViewModel.swift in Sources */,
 				E974C2D629D3729600F2D592 /* DialogueContainer.swift in Sources */,
@@ -456,6 +487,7 @@
 				E974C2B929D36A0500F2D592 /* DaVinciView.swift in Sources */,
 				E974C2BB29D36A1000F2D592 /* DaVinciViewModel.swift in Sources */,
 				E974C2D829D372C300F2D592 /* CharacterPortrait.swift in Sources */,
+				8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */,
 				E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */,
 				E974C2D029D36D7600F2D592 /* DialogueView.swift in Sources */,
 				E974C2C729D36A5B00F2D592 /* Dialogues.swift in Sources */,

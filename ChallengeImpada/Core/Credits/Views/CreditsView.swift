@@ -9,7 +9,23 @@ import SwiftUI
 
 struct CreditsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.theme.primary
+                .ignoresSafeArea()
+            VStack(spacing: 24.0) {
+                Text("Cynara Valéria")
+                    .foregroundColor(.white)
+                Text("Daniel Monterazzo")
+                    .foregroundColor(.white)
+                Text("Gabriel Felipo")
+                    .foregroundColor(.white)
+                Text("Lucas Souza")
+                    .foregroundColor(.white)
+                Text("Thaís Monteiro")
+                    .foregroundColor(.white)
+            }
+            
+        }
     }
 }
 
