@@ -17,7 +17,7 @@ extension HomeView {
                     .font(.system(size: 100, weight: .bold))
                     .foregroundColor(Color.theme.accent)
                 
-                NavigationLink(destination: DialogueView()) {
+                NavigationLink(destination: DialogueView(scene: Data().onboardingScene)) {
                         Image("playButton")
                 }
                                 

@@ -20,7 +20,7 @@ struct Data {
         Dialogue(data: (character: .arquis, text: "Lá vamos encontrar figuras históricas que vão nos ajudar, e com eles do nosso lado vamos salvar o mundo!")),
         Dialogue(data: (character: .arquis, text: "Está preparado? Então vamos nessa!")),
     ],
-        maxIndex: 8)
+        maxIndex: 7)
     
     
     let daVinciFirstScene: DialogueScene = DialogueScene(
