@@ -9,7 +9,14 @@ import SwiftUI
 
 struct TuringView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.theme.primary
+                .ignoresSafeArea()
+            VStack {
+                Text("Oi sou o Turing")
+                    .foregroundColor(.white)
+            }
+        }
     }
 }
 
