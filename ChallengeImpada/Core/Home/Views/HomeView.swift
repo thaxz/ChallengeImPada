@@ -10,21 +10,19 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         
-        ZStack {
-            
-            // background layer
-            Color.theme.primary
-                .ignoresSafeArea()
-            
-            // content layer
-            homeBody
-  
-        }
-        
+            ZStack {
+                
+                // background layer
+                Color.theme.primary
+                    .ignoresSafeArea()
+                
+                // content layer
+                homeBody
+      
+            }
     }
     
     func standBy(){
-        
     }
     
 }

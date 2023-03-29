@@ -9,15 +9,17 @@ import SwiftUI
 
 struct SkipButton: View {
     var body: some View {
-        ZStack{
-            Rectangle()
-                .border(.white, width: 5)
-                .foregroundColor(.clear)
-            Text("PULAR")
-                .foregroundColor(.white)
-                .font(.system(size: 28, weight: .bold))
+        NavigationLink (destination: LevelSelectionView()) {
+            ZStack{
+                Rectangle()
+                    .border(.white, width: 5)
+                    .foregroundColor(.clear)
+                Text("PULAR")
+                    .foregroundColor(.white)
+                    .font(.system(size: 28, weight: .bold))
+            }
+            .frame(width: 140 ,height: 64)
         }
-        .frame(width: 140 ,height: 64)
     }
 }
 
