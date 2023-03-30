@@ -15,6 +15,7 @@
 		8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */; };
 		A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4946EE129D37CE70045F4BF /* HomeComponents.swift */; };
 		CA80D6E429D4C30400A1DC2E /* CharacterDetailsComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80D6E329D4C30400A1DC2E /* CharacterDetailsComponentsView.swift */; };
+		CA80D6E629D607CF00A1DC2E /* CharacterDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80D6E529D607CF00A1DC2E /* CharacterDetailsData.swift */; };
 		CADFFB0229D3703B000923FA /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFFB0129D3703B000923FA /* CharacterDetailsView.swift */; };
 		CADFFB0429D37E20000923FA /* spongecharacter.scn in Resources */ = {isa = PBXBuildFile; fileRef = CADFFB0329D37E20000923FA /* spongecharacter.scn */; };
 		CADFFB0629D37E77000923FA /* CustomSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFFB0529D37E77000923FA /* CustomSceneView.swift */; };
@@ -59,6 +60,7 @@
 		8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuView.swift; sourceTree = "<group>"; };
 		A4946EE129D37CE70045F4BF /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		CA80D6E329D4C30400A1DC2E /* CharacterDetailsComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsComponentsView.swift; sourceTree = "<group>"; };
+		CA80D6E529D607CF00A1DC2E /* CharacterDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsData.swift; sourceTree = "<group>"; };
 		CADFFB0129D3703B000923FA /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 		CADFFB0329D37E20000923FA /* spongecharacter.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = spongecharacter.scn; sourceTree = "<group>"; };
 		CADFFB0529D37E77000923FA /* CustomSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSceneView.swift; sourceTree = "<group>"; };
@@ -138,8 +140,16 @@
 			isa = PBXGroup;
 			children = (
 				8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */,
-      );
+			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8F3EB1E629D4BEA30045EEE7 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */,
+			);
+			path = Viewmodel;
 			sourceTree = "<group>";
 		};
 		CADFFAFE29D36FCE000923FA /* CharacterDetails */ = {
@@ -418,6 +428,7 @@
 				E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */,
 				E974C2D929D37F0300F2D592 /* Data.swift */,
 				E947446229D4B5B700A3916A /* GameCharacter.swift */,
+				CA80D6E529D607CF00A1DC2E /* CharacterDetailsData.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -574,6 +585,7 @@
 				E974C2BB29D36A1000F2D592 /* DaVinciViewModel.swift in Sources */,
 				E947446529D4B75E00A3916A /* Character.swift in Sources */,
 				E974C2D829D372C300F2D592 /* CharacterPortrait.swift in Sources */,
+				CA80D6E629D607CF00A1DC2E /* CharacterDetailsData.swift in Sources */,
 				8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */,
 				E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */,
 				E974C2D029D36D7600F2D592 /* DialogueView.swift in Sources */,

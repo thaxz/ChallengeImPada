@@ -12,5 +12,9 @@ struct Character {
     let name: String
     let image3D: String
     let imagePotrait: String
-    
+    let about: String
+    let nationality: String
+    let job: String
+    let invention: String
+
 }

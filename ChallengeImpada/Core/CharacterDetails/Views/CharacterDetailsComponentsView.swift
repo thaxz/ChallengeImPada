@@ -16,7 +16,7 @@ extension CharacterDetailsView{
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
                 Spacer()
-                Text("Britânico")
+                Text(character.nationality)
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
             }
@@ -25,7 +25,7 @@ extension CharacterDetailsView{
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
                 Spacer()
-                Text("Cientista")
+                Text(character.job)
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
             }
@@ -34,7 +34,7 @@ extension CharacterDetailsView{
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
                 Spacer()
-                Text("Gravidade")
+                Text(character.invention)
                     .foregroundColor(.white)
                     .font(.system(size: 32, weight: .bold))
             }
@@ -53,7 +53,7 @@ extension CharacterDetailsView{
             Spacer().frame(height: 32)
             
             HStack{
-                Text("Cientista chefe sobre o estudo da Gravidade em UFPE. Toda ação gera uma reação de igual intensidade mas sentido oposto, então não mexe comigo 😉")
+                Text(character.about)
                     .foregroundColor(.white)
                     .font(.system(size: 24,weight: .regular))
                 
@@ -66,10 +66,35 @@ extension CharacterDetailsView{
             
         }
     }
+    
+    var navigationButtons: some View {
+        VStack{
+            NavigationLink(destination: HomeView()) {
+                    Text("Menu")
+                        .foregroundColor(Color.theme.primary)
+                        .font(.system(size: 24, weight: .bold))
+                        .frame(width: 140, height: 48)
+                        .background(Color.theme.accent)
+                        .cornerRadius(6)
+            }
+            
+            Spacer().frame(height: 14)
+            
+            NavigationLink(destination: MuseuView()) {
+                    Text("Voltar")
+                        .foregroundColor(Color.theme.primary)
+                        .font(.system(size: 24, weight: .bold))
+                        .frame(width: 140, height: 48)
+                        .background(Color.theme.accent)
+                        .cornerRadius(6)
+            }
+            
+        }
+    }
 }
 
 struct CharacterDetailsComponentsView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailsView()
+        CharacterDetailsView(character: CharacterDetailsData().newtonDetails)
     }
 }
