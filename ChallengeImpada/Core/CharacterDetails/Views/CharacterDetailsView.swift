@@ -11,6 +11,8 @@ import SceneKit
 struct CharacterDetailsView: View {
     var character: Character
     
+    @State var charactersViewModel = CharacterViewModel()
+    
     @State var daVinci: SCNScene? = .init(named: "spongecharacter.scn")
     @State var newton: SCNScene? = .init(named: "spongecharacter.scn")
     @State var turing: SCNScene? = .init(named: "spongecharacter.scn")
@@ -137,6 +139,15 @@ struct CharacterDetailsView: View {
 
 struct CharacterDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailsView(character: CharacterDetailsData().newtonDetails)
+//        CharacterDetailsView(character: CharacterDetailsData().newtonDetails)
+        let newton: Character = Character(
+            name: "Isaac Newton",
+            image3D: "spongecharacter.scn",
+            imagePortrait: Image.theme.newton,
+            about: "Cientista chefe sobre o estudo da Gravidade em UFPE. Toda ação gera uma reação de igual intensidade mas sentido oposto, então não mexe comigo 😉",
+            nationality: "Britânico",
+            job: "Cientista",
+            invention: "Gravidade")
+        CharacterDetailsView(character: newton)
     }
 }
