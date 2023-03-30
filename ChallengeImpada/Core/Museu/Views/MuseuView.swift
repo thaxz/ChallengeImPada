@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct MuseuView: View {
+    
+    //    @ObservedObject var charactersViewModel = CharacterViewModel()
+    @State var charactersViewModel = CharacterViewModel()
+    
     var body: some View {
-        ZStack {
-            Color.theme.primary
-                .ignoresSafeArea()
-            VStack {
-                Text("Oi isso é um Museu")
-                    .foregroundColor(.white)
-            }
-        }
+        
+        carouselBody
+        
     }
 }
 
