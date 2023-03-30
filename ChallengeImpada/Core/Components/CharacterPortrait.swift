@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct CharacterPortrait: View {
-    let image: String
-    let name: String
+    var image: String = ""
+    var name: String = ""
+    let character: GameCharacter
+    
+    init(character: GameCharacter) {
+        self.character = character
+        
+        switch character {
+        case .newton:
+            image = "newtonPH"
+            name = "Newton"
+        case .daVinci:
+            image = "daVinciPH"
+            name = "Da Vinci"
+        case .turing:
+            image = "turingPH"
+            name = "Alan Turing"
+        case .arquis:
+            image = "arquisPH"
+            name = "ARQUIS"
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0){
             Image(image)
@@ -29,6 +50,6 @@ struct CharacterPortrait: View {
 
 struct CharacterPortrait_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterPortrait(image: "CharacterPlaceHolder", name: "Newton")
+        CharacterPortrait(character: .arquis)
     }
 }
