@@ -9,7 +9,7 @@ import Foundation
 
 struct Data {
     
-    let onboardingScene: Scene = Scene(
+    let onboardingScene: DialogueScene = DialogueScene(
         dialogues: [
         Dialogue(data: (character: .arquis, text: "Ligando Sistemas… Baixando Atualizações…. Finalizando Instalações…")),
         Dialogue(data: (character: .arquis, text: "Concluído.")),
@@ -20,10 +20,10 @@ struct Data {
         Dialogue(data: (character: .arquis, text: "Lá vamos encontrar figuras históricas que vão nos ajudar, e com eles do nosso lado vamos salvar o mundo!")),
         Dialogue(data: (character: .arquis, text: "Está preparado? Então vamos nessa!")),
     ],
-        maxIndex: 8)
+        maxIndex: 7)
     
     
-    let daVinciFirstScene: Scene = Scene(
+    let daVinciFirstScene: DialogueScene = DialogueScene(
         dialogues: [
         Dialogue(data: (character: .arquis, text: "Parece que a viagem do tempo funcionou!")),
         Dialogue(data: (character: .arquis, text: "Nós estamos em 1503, o ano em que o grande pintor Leonardo Da Vinci completou sua obra prima, a Mona Lisa.")),
@@ -45,7 +45,7 @@ struct Data {
     ],
         maxIndex: 16)
     
-    let daVinciSecondScene: Scene = Scene(
+    let daVinciSecondScene: DialogueScene = DialogueScene(
         dialogues: [
         Dialogue(data: (character: .daVinci, text: "Isso agente! Conseguimos!")),
         Dialogue(data: (character: .daVinci, text: "Veja, temos todas as cores que precisamos, agora vamos colocá-las na minha máquina para devolvê-las para o mundo, rápido!")),

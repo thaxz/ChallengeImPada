@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Scene {
+struct DialogueScene {
     
     let dialogues: [Dialogue]
     let maxIndex: Int

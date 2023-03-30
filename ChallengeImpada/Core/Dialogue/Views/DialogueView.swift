@@ -9,9 +9,9 @@ import SwiftUI
 
 struct DialogueView: View {
     @State var index: Int = 0
-    
+    @State var characterName: GameCharacter = .arquis
+    let scene: DialogueScene
     var body: some View {
-        NavigationStack {
             ZStack {
                 Color.theme.primary
                     .ignoresSafeArea()
@@ -22,32 +22,24 @@ struct DialogueView: View {
                             } label: { SkipButton() }
                     }
                     Spacer()
-
-                    Button {
-                    // skip dialogue
-                    } label: { SkipButton() }
-
-                }
-                Spacer()
-                HStack(alignment: .bottom, spacing: 16){
-                    CharacterPortrait(image: "CharacterPlaceHolder", name: "Newton")
-//                    DialogueContainer(text: Data().arquisOnboarding.text[index])
-//                        .onTapGesture {
-//                            index += 1
-//                            if index > Data().arquisOnboarding.maxIndex {
-//                                self.index = 0
-//                                // change game scene
-//                            }
-//                        }
-                    
+                    HStack(alignment: .bottom, spacing: 16){
+                        CharacterPortrait(character: scene.dialogues[index].data.character)
+                        DialogueContainer(text: scene.dialogues[index].data.text)
+                            .onTapGesture {
+                                index += 1
+                                if index > scene.maxIndex {
+                                    self.index = 0
+                                    // change game scene
+                                }
+                            }
+                    }
                 }
             }
-        }
     }
 }
 
 struct DialogueView_Previews: PreviewProvider {
     static var previews: some View {
-        DialogueView()
+        DialogueView(scene: Data().daVinciFirstScene)
     }
 }
