@@ -9,7 +9,12 @@ import SwiftUI
 import SceneKit
 
 struct CharacterDetailsView: View {
-    @State var scene: SCNScene? = .init(named: "spongecharacter.scn")
+    var character: Character
+    
+    @State var daVinci: SCNScene? = .init(named: "spongecharacter.scn")
+    @State var newton: SCNScene? = .init(named: "spongecharacter.scn")
+    @State var turing: SCNScene? = .init(named: "spongecharacter.scn")
+    
     @GestureState var offset: CGFloat = 0
     
     let collectablesColumns = [
@@ -26,8 +31,18 @@ struct CharacterDetailsView: View {
             HStack{
                 
                 ZStack {
-                    CustomSceneView(scene: $scene)
-                        .frame(height:550)
+                    if character.name == "Leonardo Da Vinci" {
+                        CustomSceneView(scene: $daVinci)
+                            .frame(height:550)
+                    }
+                    else if character.name == "Isaac Newton" {
+                        CustomSceneView(scene: $newton)
+                            .frame(height:550)
+                    }
+                    else if character.name == "Alan Turing" {
+                        CustomSceneView(scene: $turing)
+                            .frame(height:550)
+                    }
                     
                     Rectangle()
                         .frame(height: 550)
@@ -43,6 +58,17 @@ struct CharacterDetailsView: View {
                             rotateObject()
                         })
                     
+                    //Botões
+                    VStack{
+                        Spacer().frame(height: 16)
+                        HStack{
+                            Spacer().frame(width: 16)
+                            navigationButtons
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                    
                     
                 }
                 HStack{
@@ -53,7 +79,7 @@ struct CharacterDetailsView: View {
                             Spacer().frame(height: 24)
                             
                             HStack {
-                                Text("Isaac Newton")
+                                Text(character.name)
                                     .foregroundColor(.white)
                                     .font(.system(size: 56, weight: .heavy))
                                 
@@ -97,12 +123,20 @@ struct CharacterDetailsView: View {
     func rotateObject() {
         let newAngle = Float((offset * .pi)/180)
         
-        scene?.rootNode.eulerAngles.y = newAngle
+        if character.name == "Leonardo Da Vinci" {
+            daVinci?.rootNode.eulerAngles.y = newAngle
+        }
+        else if character.name == "Isaac Newton" {
+            newton?.rootNode.eulerAngles.y = newAngle
+        }
+        else if character.name == "Alan Turing" {
+            turing?.rootNode.eulerAngles.y = newAngle
+        }
     }
 }
 
 struct CharacterDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailsView()
+        CharacterDetailsView(character: CharacterDetailsData().newtonDetails)
     }
 }
