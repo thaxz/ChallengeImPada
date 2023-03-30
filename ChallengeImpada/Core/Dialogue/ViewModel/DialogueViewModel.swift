@@ -1,15 +1,16 @@
 //
-//  Dialogues.swift
+//  DialogueViewModel.swift
 //  ChallengeImpada
 //
 //  Created by thaxz on 28/03/23.
 //
 
 import Foundation
+import SwiftUI
 
-struct Dialogue {
+class DialogueViewModel{
     
-    let data: (character: GameCharacter, text: String)
+
+    
     
 }
-
