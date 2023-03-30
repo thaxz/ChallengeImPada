@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Dialogue {
+    
+    let data: (character: GameCharacter, text: String)
+    
+}
+
