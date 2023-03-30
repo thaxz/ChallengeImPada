@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */; };
 		8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */; };
+		8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */; };
+		8F3EB1EE29D4D5C00045EEE7 /* DaVinciComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1ED29D4D5C00045EEE7 /* DaVinciComponents.swift */; };
+		8F3EB1F029D61D630045EEE7 /* PossibleColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1EF29D61D630045EEE7 /* PossibleColors.swift */; };
 		A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4946EE129D37CE70045F4BF /* HomeComponents.swift */; };
 		E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */; };
 		E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580329C8F67E0055EDB3 /* ContentView.swift */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewModel.swift; sourceTree = "<group>"; };
 		8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuView.swift; sourceTree = "<group>"; };
+		8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8F3EB1ED29D4D5C00045EEE7 /* DaVinciComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaVinciComponents.swift; sourceTree = "<group>"; };
+		8F3EB1EF29D61D630045EEE7 /* PossibleColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleColors.swift; sourceTree = "<group>"; };
 		A4946EE129D37CE70045F4BF /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		E91A57FE29C8F67E0055EDB3 /* ChallengeImpada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeImpada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeImpadaApp.swift; sourceTree = "<group>"; };
@@ -286,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				E974C2B829D36A0500F2D592 /* DaVinciView.swift */,
+				8F3EB1ED29D4D5C00045EEE7 /* DaVinciComponents.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 				E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */,
 				E974C2D929D37F0300F2D592 /* Data.swift */,
 				E947446229D4B5B700A3916A /* GameCharacter.swift */,
+				8F3EB1EF29D61D630045EEE7 /* PossibleColors.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -355,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				E974C2AA29D360FA00F2D592 /* Color.swift */,
+				8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -477,6 +486,7 @@
 				E974C2AD29D369B500F2D592 /* HomeView.swift in Sources */,
 				E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */,
 				E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */,
+				8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */,
 				E974C2B329D369DA00F2D592 /* CreditsViewModel.swift in Sources */,
 				E947446329D4B5B700A3916A /* GameCharacter.swift in Sources */,
 				E974C2DA29D37F0300F2D592 /* Data.swift in Sources */,
@@ -487,6 +497,8 @@
 				8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */,
 				E974C2CB29D36A7800F2D592 /* AnyService.swift in Sources */,
 				E974C2AF29D369C000F2D592 /* HomeViewModel.swift in Sources */,
+				8F3EB1F029D61D630045EEE7 /* PossibleColors.swift in Sources */,
+				8F3EB1EE29D4D5C00045EEE7 /* DaVinciComponents.swift in Sources */,
 				E974C2D629D3729600F2D592 /* DialogueContainer.swift in Sources */,
 				E974C2C529D36A5200F2D592 /* AnyComponent.swift in Sources */,
 				E974C2AB29D360FA00F2D592 /* Color.swift in Sources */,

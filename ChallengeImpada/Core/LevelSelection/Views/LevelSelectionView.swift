@@ -31,7 +31,7 @@ struct LevelSelectionView: View {
                         Rectangle()
                             .border(.white, width: 5)
                             .foregroundColor(.clear)
-                        Text("Olha Maçaaaaaa")
+                        Text("Olha Maçuein")
                             .foregroundColor(.white)
                             .font(.system(size: 28, weight: .bold))
                     }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class DialogueViewModel{
+class DialogueViewModel {
 //    
 //    @Published var dialogue: [String]
 //    @Published var index: Int
