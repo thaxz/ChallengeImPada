@@ -69,8 +69,26 @@ struct DaVinciView: View {
                         .onTapGesture {
                             DaVinciVM.makeRandomColor()
                         }
-                    circleColor1
-                    circleColor2
+                    HStack {
+                        ZStack {
+                            circleColor1
+                            Button {
+                                DaVinciVM.removeFirstColor()
+                            } label: {
+                                redoButton
+                            }
+                        }
+                    }
+                    HStack {
+                        ZStack {
+                            circleColor2
+                            Button {
+                                DaVinciVM.removeSecondColor()
+                            } label: {
+                                redoButton
+                            }
+                        }
+                    }
                 }
                 
             }

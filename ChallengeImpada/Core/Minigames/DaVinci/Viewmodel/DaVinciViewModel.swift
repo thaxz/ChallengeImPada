@@ -13,45 +13,51 @@ class DaVinciViewModel: ObservableObject {
     @Published var secondColor = UIColor(.black)
     @Published var mergedColor = UIColor(.black)
     @Published var randomColor = UIColor(.black)
+    @Published var pressedButtomColor = UIColor(.black)
     
-    @Published var randomText: PossibleColors = .none
-    let colors: [(color: UIColor, name: PossibleColors)] = [
-        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5), .MG),
-        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5), .MP),
-        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5), .MO),
-        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5), .CG),
-        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5), .CP),
-        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5), .CO),
-        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5), .YG),
-        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5), .YG),
-        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5), .YO),
-        (UIColor.blend(color1: UIColor(.green), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5), .GP),
-        (UIColor.blend(color1: UIColor(.green), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5), .GO),
-        (UIColor.blend(color1: UIColor(.purple), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5), .PO)
+    let colors: [UIColor] = [
+        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.green), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.green), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
+        (UIColor.blend(color1: UIColor(.purple), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5))
     ]
     
     func magentaPress() {
-        firstColor = UIColor(ciColor: .magenta)
+        pressedButtomColor = UIColor(ciColor: .magenta)
+        fillColor()
     }
     
     func cyanPress() {
-        firstColor = UIColor(.cyan)
+        pressedButtomColor = UIColor(.cyan)
+        fillColor()
     }
     
     func yellowPress() {
-        firstColor = UIColor(.yellow)
+        pressedButtomColor = UIColor(.yellow)
+        fillColor()
     }
     
     func greenPress() {
-        secondColor = UIColor(.green)
+        pressedButtomColor = UIColor(.green)
+        fillColor()
     }
     
     func purplePress() {
-        secondColor = UIColor(.purple)
+        pressedButtomColor = UIColor(.purple)
+        fillColor()
     }
     
     func orangePress() {
-        secondColor = UIColor(.orange)
+        pressedButtomColor = UIColor(.orange)
+        fillColor()
     }
     
     func merge() -> UIColor {
@@ -60,25 +66,44 @@ class DaVinciViewModel: ObservableObject {
         return mergedColor
     }
     
-    func makeRandomColor() -> (UIColor, PossibleColors) {
+    func makeRandomColor() -> UIColor {
         let randomIndex = Int.random(in: 0..<12)
         
-        randomColor = colors[randomIndex].color
-        randomText = colors[randomIndex].name
+        randomColor = colors[randomIndex]
         
-        return (randomColor, randomText)
+        return randomColor
     }
     
     func compareColors(){
         var hashMerged: Int = mergedColor.hash
         var hashRandom: Int = randomColor.hash
         
-        if hashMerged == hashRandom {
-            print("############MEU DEUS ")
-        } else {
-            print("FRACASSO######")
-        }
         
+        if (firstColor.hash != 65536) && (secondColor.hash != 65536) {
+            if hashMerged == hashRandom {
+                print("############MEU DEUS ")
+            } else {
+                print("FRACASSO######")
+            }
+        } else {
+            print("Selecione uma cor")
+        }
+    }
+    
+    func fillColor() {
+        if firstColor.hash == 65536 {
+            firstColor = pressedButtomColor
+        } else {
+            secondColor = pressedButtomColor
+        }
+    }
+    
+    func removeFirstColor() {
+        firstColor = UIColor(.black)
+    }
+    
+    func removeSecondColor() {
+        secondColor = UIColor(.black)
     }
     
 }

@@ -116,5 +116,14 @@ extension DaVinciView {
                 //.foregroundColor(.black)
         }
     }
+    
+    var redoButton: some View {
+        ZStack{
+            Image(systemName: "x.circle")
+                .resizable()
+                .foregroundColor(.red)
+                .frame(width: 50, height: 50)
+        }
+    }
 }
 
