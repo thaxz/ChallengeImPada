@@ -29,6 +29,14 @@ struct CustomSceneView: UIViewRepresentable {
 
 struct CustomSceneView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterDetailsView(character: CharacterDetailsData().newtonDetails)
+        let newton: Character = Character(
+            name: "Isaac Newton",
+            image3D: "spongecharacter.scn",
+            imagePortrait: Image.theme.newton,
+            about: "Cientista chefe sobre o estudo da Gravidade em UFPE. Toda ação gera uma reação de igual intensidade mas sentido oposto, então não mexe comigo 😉",
+            nationality: "Britânico",
+            job: "Cientista",
+            invention: "Gravidade")
+        CharacterDetailsView(character: newton)
     }
 }
