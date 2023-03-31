@@ -8,10 +8,8 @@
 import Foundation
 import SwiftUI
 
-class DialogueViewModel {
-//    
-//    @Published var dialogue: [String]
-//    @Published var index: Int
+
+class DialogueViewModel{
 
     
     
