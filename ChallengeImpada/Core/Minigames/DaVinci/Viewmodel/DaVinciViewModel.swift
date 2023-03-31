@@ -60,18 +60,16 @@ class DaVinciViewModel: ObservableObject {
         fillColor()
     }
     
-    func merge() -> UIColor {
+    func merge() {
         mergedColor = UIColor.blend(color1: firstColor, intensity1: 0.5, color2: secondColor, intensity2: 0.5)
         print(mergedColor.hash)
-        return mergedColor
     }
     
-    func makeRandomColor() -> UIColor {
+    func makeRandomColor() {
         let randomIndex = Int.random(in: 0..<12)
         
         randomColor = colors[randomIndex]
         
-        return randomColor
     }
     
     func compareColors(){
