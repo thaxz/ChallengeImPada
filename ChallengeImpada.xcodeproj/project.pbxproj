@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */; };
 		8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */; };
+		8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */; };
+		8F3EB1EE29D4D5C00045EEE7 /* DaVinciComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1ED29D4D5C00045EEE7 /* DaVinciComponents.swift */; };
 		A4478BF729D4C76900229AA6 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478BF629D4C76900229AA6 /* CharacterViewModel.swift */; };
 		A4478BF929D4C7A400229AA6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478BF829D4C7A400229AA6 /* Image.swift */; };
 		A4478C1529D61AC400229AA6 /* MuseuViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478C1429D61AC400229AA6 /* MuseuViewComponents.swift */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewModel.swift; sourceTree = "<group>"; };
 		8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuView.swift; sourceTree = "<group>"; };
+		8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8F3EB1ED29D4D5C00045EEE7 /* DaVinciComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaVinciComponents.swift; sourceTree = "<group>"; };
 		A4478BF629D4C76900229AA6 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		A4478BF829D4C7A400229AA6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4478C1429D61AC400229AA6 /* MuseuViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewComponents.swift; sourceTree = "<group>"; };
@@ -338,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				E974C2B829D36A0500F2D592 /* DaVinciView.swift */,
+				8F3EB1ED29D4D5C00045EEE7 /* DaVinciComponents.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				E974C2AA29D360FA00F2D592 /* Color.swift */,
+				8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */,
 				A4478BF829D4C7A400229AA6 /* Image.swift */,
 			);
 			path = Extensions;
@@ -533,6 +539,7 @@
 				CADFFB0229D3703B000923FA /* CharacterDetailsView.swift in Sources */,
 				CADFFB0629D37E77000923FA /* CustomSceneView.swift in Sources */,
 				E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */,
+				8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */,
 				E974C2B329D369DA00F2D592 /* CreditsViewModel.swift in Sources */,
 				E947446329D4B5B700A3916A /* GameCharacter.swift in Sources */,
 				E974C2DA29D37F0300F2D592 /* Data.swift in Sources */,
@@ -545,6 +552,7 @@
 				A4478C1529D61AC400229AA6 /* MuseuViewComponents.swift in Sources */,
 				E974C2CB29D36A7800F2D592 /* AnyService.swift in Sources */,
 				E974C2AF29D369C000F2D592 /* HomeViewModel.swift in Sources */,
+				8F3EB1EE29D4D5C00045EEE7 /* DaVinciComponents.swift in Sources */,
 				E974C2D629D3729600F2D592 /* DialogueContainer.swift in Sources */,
 				E974C2C529D36A5200F2D592 /* AnyComponent.swift in Sources */,
 				E974C2AB29D360FA00F2D592 /* Color.swift in Sources */,
