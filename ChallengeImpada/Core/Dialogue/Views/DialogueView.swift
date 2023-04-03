@@ -11,6 +11,16 @@ struct DialogueView: View {
     @State var index: Int = 0
     @State var characterName: GameCharacter = .arquis
     let scene: DialogueScene
+    
+    @StateObject var dialogueViewModel: DialogueViewModel
+    
+    init(scene: DialogueScene){
+        
+        self.scene = scene
+        
+        _dialogueViewModel = StateObject(wrappedValue: DialogueViewModel())
+    }
+    
     var body: some View {
             ZStack {
                 Color.theme.primary

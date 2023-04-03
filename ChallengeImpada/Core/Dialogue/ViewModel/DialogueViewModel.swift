@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-class DialogueViewModel{
+class DialogueViewModel: ObservableObject {
     
-
+    @Published var index: Int = 0
+    
     
     
 }
