@@ -18,6 +18,10 @@ struct ImageTheme2D {
     let davinci = Image("davinci2d")
     let turing = Image("turing2d")
     let arrowDown = Image("arrowDown")
+    let circleButton = Image("circleButton")
+    let squareButton = Image("squareButton")
+    let starButton = Image("starButton")
+    let triangleButton = Image("triangleButton")
     
 }
 
