@@ -3,13 +3,21 @@ import SwiftUI
 class SymbolViewModel: ObservableObject {
     
     @Published var symbols: [Symbol] = []
+    @Published var sortedSymbols: [Symbol] = []
+    @Published var pressedSymbols: [Symbol] = []
+    let numberOfSymbols = 4
     
     init() {
         addSymbols()
+        updateSymbols()
     }
     
     func addSymbols() {
         symbols = symbolsData
+    }
+    
+    func updateSymbols() {
+        sortedSymbols = sortSymbols()
     }
     
     func sortPhrase(array: [String]) -> String {
@@ -19,8 +27,8 @@ class SymbolViewModel: ObservableObject {
     
     func sortSymbols() -> [Symbol] {
         var newSymbols = [Symbol]()
-        for index in 0..<4 {
-            guard let sortedSymbol = symbols.randomElement() else { return [Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound")] }
+        for index in 0..<numberOfSymbols {
+            guard let sortedSymbol = symbols.randomElement() else { return [Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound", nameSymbol: "circle")] }
             newSymbols.append(sortedSymbol)
         }
         return newSymbols
@@ -39,10 +47,10 @@ class SymbolViewModel: ObservableObject {
 }
 
 let symbolsData = [
-    Symbol(symbolImage: Image.theme.starButton, symbolSound: "starSound"),
-    Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound"),
-    Symbol(symbolImage: Image.theme.squareButton, symbolSound: "squareSound"),
-    Symbol(symbolImage: Image.theme.triangleButton, symbolSound: "triangleSound")
+    Symbol(symbolImage: Image.theme.starButton, symbolSound: "starSound", nameSymbol: "star"),
+    Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound", nameSymbol: "circle"),
+    Symbol(symbolImage: Image.theme.squareButton, symbolSound: "squareSound", nameSymbol: "square"),
+    Symbol(symbolImage: Image.theme.triangleButton, symbolSound: "triangleSound", nameSymbol: "triangle")
 ]
 
 let phrases: [String] = []

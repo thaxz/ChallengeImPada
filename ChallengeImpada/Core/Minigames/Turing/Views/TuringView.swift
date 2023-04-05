@@ -3,15 +3,12 @@ import SwiftUI
 
 struct TuringView: View {
     
-    @State var symbolsViewModel = SymbolViewModel()
+    @ObservedObject var symbolsViewModel = SymbolViewModel()
     @State var selectedFourSymbols = false
+//    @State var sortedSymbols: [Symbol]
     
     var body: some View {
         ZStack {
-            
-            let symbols = symbolsViewModel.sortSymbols()
-            // array with all the pressed buttons
-            var pressedSymbols: [Symbol] = []
             
             Color.theme.primary
                 .ignoresSafeArea()
@@ -19,7 +16,7 @@ struct TuringView: View {
             VStack {
                 
                 HStack {
-                    ForEach(symbols, id: \.self) { symbol in
+                    ForEach(symbolsViewModel.sortedSymbols, id: \.self) { symbol in
                         symbol.symbolImage
                             .resizable()
                             .scaledToFit()
@@ -29,11 +26,7 @@ struct TuringView: View {
                 HStack {
                     
                     Button(action: {
-                        pressedSymbols.append(symbolsViewModel.symbols[0])
-                        if pressedSymbols.count == 4 {
-                            let result = symbolsViewModel.compareTwoArrayBySymbol(sortedArray: symbols, pressedArray: pressedSymbols)
-                            print(result)
-                        }
+                        symbolsViewModel.pressedSymbols.append(symbolsViewModel.symbols[0])
                     }) {
                         Image.theme.starButton
                             .resizable()
@@ -41,11 +34,7 @@ struct TuringView: View {
                     
                     
                     Button(action: {
-                        pressedSymbols.append(symbolsViewModel.symbols[2])
-                        if pressedSymbols.count == 4 {
-                            let result = symbolsViewModel.compareTwoArrayBySymbol(sortedArray: symbols, pressedArray: pressedSymbols)
-                            print(result)
-                        }
+                        symbolsViewModel.pressedSymbols.append(symbolsViewModel.symbols[2])
                     }) {
                         Image.theme.squareButton
                             .resizable()
@@ -57,11 +46,7 @@ struct TuringView: View {
                 HStack {
                     
                     Button(action: {
-                        pressedSymbols.append(symbolsViewModel.symbols[1])
-                        if pressedSymbols.count == 4 {
-                            let result = symbolsViewModel.compareTwoArrayBySymbol(sortedArray: symbols, pressedArray: pressedSymbols)
-                            print(result)
-                        }
+                        symbolsViewModel.pressedSymbols.append(symbolsViewModel.symbols[1])
                     }) {
                         Image.theme.circleButton
                             .resizable()
@@ -69,11 +54,7 @@ struct TuringView: View {
                     
                     
                     Button(action: {
-                        pressedSymbols.append(symbolsViewModel.symbols[3])
-                        if pressedSymbols.count == 4 {
-                            let result = symbolsViewModel.compareTwoArrayBySymbol(sortedArray: symbols, pressedArray: pressedSymbols)
-                            print(result)
-                        }
+                        symbolsViewModel.pressedSymbols.append(symbolsViewModel.symbols[3])
                         
                     }) {
                         Image.theme.triangleButton
@@ -82,7 +63,23 @@ struct TuringView: View {
                     
                 }
                 
+            }.onReceive(Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()) { _ in
+                if symbolsViewModel.pressedSymbols.count == 4 {
+                    let isMatch = symbolsViewModel.compareTwoArrayBySymbol(sortedArray: symbolsViewModel.sortedSymbols, pressedArray: symbolsViewModel.pressedSymbols)
+                    
+                    if isMatch {
+                        symbolsViewModel.sortedSymbols = symbolsViewModel.sortSymbols()
+                        for sym in symbolsViewModel.sortedSymbols {
+                            print(sym.nameSymbol)
+                        }
+
+                    } else {
+                        print("errou porra")
+                    }
+                    symbolsViewModel.pressedSymbols = []
+                }
             }
+
 
         }
     }
