@@ -5,7 +5,7 @@ struct TuringView: View {
     
     @ObservedObject var symbolsViewModel = SymbolViewModel()
     @State var selectedFourSymbols = false
-//    @State var sortedSymbols: [Symbol]
+    @State var showCreditsView = false
     
     var body: some View {
         ZStack {
@@ -63,24 +63,28 @@ struct TuringView: View {
                     
                 }
                 
+                NavigationLink(destination: CreditsView(), isActive: $showCreditsView) {
+                    EmptyView()
+                }
+                
             }.onReceive(Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()) { _ in
                 if symbolsViewModel.pressedSymbols.count == 4 {
                     let isMatch = symbolsViewModel.compareTwoArrayBySymbol(sortedArray: symbolsViewModel.sortedSymbols, pressedArray: symbolsViewModel.pressedSymbols)
                     
                     if isMatch {
                         symbolsViewModel.sortedSymbols = symbolsViewModel.sortSymbols()
-                        for sym in symbolsViewModel.sortedSymbols {
-                            print(sym.nameSymbol)
-                        }
-
+                        
+                        
                     } else {
                         print("errou porra")
+                        showCreditsView = true
+                        
                     }
                     symbolsViewModel.pressedSymbols = []
                 }
             }
-
-
+            
+            
         }
     }
 }
