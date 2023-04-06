@@ -19,7 +19,7 @@ class NewtonScene: SKScene, ObservableObject {
     let gameOverSound = SKAction.playSoundFileNamed("hit.mp3", waitForCompletion: false)
     
     var velocity: Double = 100
-    var gameArea: CGFloat = 410.0
+    var gameArea: CGFloat = 900.0
     var score: Int = 0
     var flyForce: CGFloat = 28.0
     
@@ -37,6 +37,9 @@ class NewtonScene: SKScene, ObservableObject {
     
     
     override func didMove(to view: SKView) {
+        
+        self.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        scene?.scaleMode = .fill
         
         physicsWorld.contactDelegate = self
         
@@ -65,6 +68,7 @@ class NewtonScene: SKScene, ObservableObject {
         // Arrumando a posição
         // Como a imagem surge no canto, passando pro centro
         background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+        background.size = self.size
         // Ajustando o z
         background.zPosition = 0
         // adicionando na cena
@@ -78,6 +82,7 @@ class NewtonScene: SKScene, ObservableObject {
         // Arrumando posição
         floor.position = CGPoint(x: floor.size.width/2, y: size.height - gameArea - floor.size.height/2)
         floor.zPosition = 2
+        floor.size = CGSize(width: self.size.width * 2, height: 400)
         // Adicionando
         addChild(floor)
         
@@ -108,15 +113,42 @@ class NewtonScene: SKScene, ObservableObject {
         // criando a duração
         let duration = Double(floor.size.width/2)/velocity
         // criando a ação
-        let moveFloorAction = SKAction.moveBy(x: -floor.size.width/2, y: 0, duration: duration)
+        let moveFloorAction = SKAction.moveBy(x: -floor.size.width/4, y: 0, duration: duration)
         // o de cima move pra esquerda e o de baixo para a direita. vou criar um loop dos dois
-        let resetXAction = SKAction.moveBy(x: floor.size.width/2, y: 0, duration: 0)
+        let resetXAction = SKAction.moveBy(x: floor.size.width/4, y: 0, duration: 0)
         // criando ação de sequência
         let sequenceAction = SKAction.sequence([moveFloorAction, resetXAction])
         // repetindo a sequencia forever
         let repeatAction = SKAction.repeatForever(sequenceAction)
         // colocando no node
         floor.run(repeatAction)
+    }
+    
+    func MoveBackgrounds(image: String, y: CGFloat, z: CGFloat, duration: Double, needsPhysics: Bool, size: CGSize){
+        for i in 0...1{
+            let node = SKSpriteNode(imageNamed: image)
+            node.anchorPoint = .zero
+            node.position = CGPoint(x: size.width * CGFloat(i), y: y)
+            node.size = size
+            node.zPosition = z
+            
+            if needsPhysics {
+                node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
+                node.physicsBody?.isDynamic = false
+                node.physicsBody?.contactTestBitMask = 1
+                node.name = "player1"
+            }
+            
+            let move = SKAction.moveBy(x: -node.size.width, y: 0, duration: duration)
+            let wrap = SKAction.moveBy(x: node.size.width, y: 0, duration: 0)
+            let sequence = SKAction.sequence([move, wrap])
+            let immer = SKAction.repeatForever(sequence)
+            
+            node.run(immer)
+            
+            addChild(node)
+            
+        }
     }
     
     
@@ -142,19 +174,18 @@ class NewtonScene: SKScene, ObservableObject {
         addChild(player)
     }
     
-    func addScore(){
-        // ajustando a fonte
-        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
-        scoreLabel.fontSize = 94
-        scoreLabel.text = "\(score)"
-        scoreLabel.alpha = 0.8
-        
-        scoreLabel.zPosition = 5
-        scoreLabel.position = CGPoint(x: size.width/2, y: size.height - 100)
-        
-        addChild(scoreLabel)
-        
-    }
+//    func addScore(){
+//        // ajustando a fonte
+//        //scoreLabel.fontSize = 45
+//        scoreLabel.text = "\(score)"
+//        scoreLabel.alpha = 0.8
+//
+//        scoreLabel.zPosition = 5
+//        scoreLabel.position = CGPoint(x: size.width/2, y: size.height - 100)
+//
+//       // addChild(scoreLabel)
+//
+//    }
     
     // Método de spawnar inimigos
     func spawnEnemies(){
@@ -268,7 +299,7 @@ class NewtonScene: SKScene, ObservableObject {
             if !gameStarted {
                 // tirando a intro da tela
                 intro.removeFromParent()
-                addScore()
+               // addScore()
                 
                 // adicionando física ao player
                 player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width/2 - 10)
@@ -323,6 +354,8 @@ class NewtonScene: SKScene, ObservableObject {
             player.zRotation = yVelocity
         }
     }
+    
+    
 }
 
 // Adicionando o delegate para informar quando rolou o contato
@@ -336,7 +369,7 @@ extension NewtonScene: SKPhysicsContactDelegate {
             if contact.bodyA.categoryBitMask == scoreCategory || contact.bodyB.categoryBitMask == scoreCategory {
                 // significa que aumentou um ponto
                 score += 1
-                scoreLabel.text = "\(score)"
+              //  scoreLabel.text = "\(score)"
                 // som de ponto
                 run(scoreSound)
             } else if contact.bodyA.categoryBitMask == enemyCategory || contact.bodyB.categoryBitMask == enemyCategory {
