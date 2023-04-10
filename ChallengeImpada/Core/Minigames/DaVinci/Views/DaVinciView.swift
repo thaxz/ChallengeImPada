@@ -21,14 +21,14 @@ struct DaVinciView: View {
             VStack(spacing: 128) {
                 HStack(spacing: 128) {
                     Button {
-                        DaVinciVM.magentaPress()
+                        DaVinciVM.redPress()
                     } label: {
-                        MagentaButtonComponent
+                        RedButtonComponent
                     }
                     Button {
-                        DaVinciVM.cyanPress()
+                        DaVinciVM.bluePress()
                     } label: {
-                        CyanButtonComponent
+                        BlueButtonComponent
                     }
                     Button {
                         DaVinciVM.yellowPress()
@@ -36,30 +36,31 @@ struct DaVinciView: View {
                         YellowButtonComponent
                     }
                 }
-                HStack(spacing: 128) {
-                    Button {
-                        DaVinciVM.greenPress()
-                    } label: {
-                        GreenButtonComponent
+                if DaVinciVM.secondStage {
+                    HStack(spacing: 128) {
+                        Button {
+                            DaVinciVM.greenPress()
+                        } label: {
+                            GreenButtonComponent
+                        }
+                        Button {
+                            DaVinciVM.purplePress()
+                        } label: {
+                            PurpleButtonComponent
+                        }
+                        Button {
+                            DaVinciVM.orangePress()
+                        } label: {
+                            OrangeButtonComponent
+                        }
                     }
-                    Button {
-                        DaVinciVM.purplePress()
-                    } label: {
-                        PurpleButtonComponent
-                    }
-                    Button {
-                        DaVinciVM.orangePress()
-                    } label: {
-                        OrangeButtonComponent
-                    }
-                    //Text("Oi sou o Da Vinci")
-                        //.foregroundColor(.white)
-                        //.foregroundColor(Color(UIColor.blend(color1: .yellow, intensity1: 0.5, color2: .blue, intensity2: 0.5)))
                 }
                 HStack {
                     Button {
                         DaVinciVM.merge()
                         DaVinciVM.compareColors()
+                        DaVinciVM.removeFirstColor()
+                        DaVinciVM.removeSecondColor()
                     } label: {
                         mergeButtonComponent
                     }
@@ -95,6 +96,23 @@ struct DaVinciView: View {
         }
         .onAppear{
             DaVinciVM.makeRandomColor()
+        }
+        .sheet(isPresented: $DaVinciVM.tutorialPopUp) {
+            DaVinciTutorialView()
+                .clearModalBackground()
+                //.ignoresSafeArea()
+                
+        }
+        .sheet(isPresented: $DaVinciVM.switchStagePopUp) {
+            SecondStageView()
+                .clearModalBackground()
+                //.ignoresSafeArea()
+                
+        }
+        .sheet(isPresented: $DaVinciVM.endGamePopUp) {
+            EndGameView()
+                .clearModalBackground()
+                //.ignoresSafeArea()
         }
     }
 }

@@ -7,25 +7,25 @@
 
 import SwiftUI
 extension DaVinciView {
-    var MagentaButtonComponent: some View {
+    var RedButtonComponent: some View {
         ZStack{
             Rectangle()
-                .border(Color(UIColor(ciColor: .magenta)), width: 5)
+                .border(Color(UIColor(ciColor: .red)), width: 5)
                 .foregroundColor(.clear)
-            Text("Magenta")
-                .foregroundColor(Color(UIColor(ciColor: .magenta)))
+            Text("Vermelho")
+                .foregroundColor(Color(UIColor(ciColor: .red)))
                 .font(.system(size: 28, weight: .bold))
         }
         .frame(width: 140 ,height: 64)
     }
     
-    var CyanButtonComponent: some View {
+    var BlueButtonComponent: some View {
             ZStack{
                 Rectangle()
-                    .border(.cyan, width: 5)
+                    .border(.blue, width: 5)
                     .foregroundColor(.clear)
                 Text("Azul")
-                    .foregroundColor(.cyan)
+                    .foregroundColor(.blue)
                     .font(.system(size: 28, weight: .bold))
             }
             .frame(width: 140 ,height: 64)
