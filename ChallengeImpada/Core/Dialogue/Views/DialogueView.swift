@@ -40,6 +40,6 @@ struct DialogueView: View {
 
 struct DialogueView_Previews: PreviewProvider {
     static var previews: some View {
-        DialogueView(scene: Data().daVinciFirstScene)
+        DialogueView(scene: Data().daVinciOnboardingScene)
     }
 }

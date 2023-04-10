@@ -14,7 +14,7 @@ struct Data {
         Dialogue(data: (character: .arquis, text: "Ligando Sistemas… Baixando Atualizações…. Finalizando Instalações…")),
         Dialogue(data: (character: .arquis, text: "Concluído.")),
         Dialogue(data: (character: .arquis, text: "Olá, eu sou o Arquis, a inteligência artificial que vai lhe explicar os objetivos da missão.")),
-        Dialogue(data: (character: .arquis, text: "Como devo chamá-lo?")),
+        Dialogue(data: (character: .arquis, text: "Bem vindo, Enzo Valentina")),
         Dialogue(data: (character: .arquis, text: "Como você deve saber a nossa era está um caos desde que o vilão, Morcego Assombrado, voltou no passado e alterou a linha do tempo.")),
         Dialogue(data: (character: .arquis, text: "Agora você foi escolhido para consertar tudo que ele fez de errado, e para isso vamos viajar para o passado em cada local que ele visitou.")),
         Dialogue(data: (character: .arquis, text: "Lá vamos encontrar figuras históricas que vão nos ajudar, e com eles do nosso lado vamos salvar o mundo!")),
@@ -23,7 +23,7 @@ struct Data {
         maxIndex: 7)
     
     
-    let daVinciFirstScene: DialogueScene = DialogueScene(
+    let daVinciOnboardingScene: DialogueScene = DialogueScene(
         dialogues: [
         Dialogue(data: (character: .arquis, text: "Parece que a viagem do tempo funcionou!")),
         Dialogue(data: (character: .arquis, text: "Nós estamos em 1503, o ano em que o grande pintor Leonardo Da Vinci completou sua obra prima, a Mona Lisa.")),
@@ -45,7 +45,7 @@ struct Data {
     ],
         maxIndex: 16)
     
-    let daVinciSecondScene: DialogueScene = DialogueScene(
+    let daVinciConclusionScene: DialogueScene = DialogueScene(
         dialogues: [
         Dialogue(data: (character: .daVinci, text: "Isso agente! Conseguimos!")),
         Dialogue(data: (character: .daVinci, text: "Veja, temos todas as cores que precisamos, agora vamos colocá-las na minha máquina para devolvê-las para o mundo, rápido!")),
