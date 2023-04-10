@@ -15,28 +15,37 @@ class DaVinciViewModel: ObservableObject {
     @Published var randomColor = UIColor(.black)
     @Published var pressedButtomColor = UIColor(.black)
     
-    let colors: [UIColor] = [
-        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(ciColor: .magenta), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.cyan), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.green), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.green), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)),
-        (UIColor.blend(color1: UIColor(.purple), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5))
+    @Published var tutorialPopUp = true
+    @Published var secondStage = false
+    @Published var switchStagePopUp = false
+    @Published var endGamePopUp = false
+    @Published var gameEnded = false
+    
+    @Published var colorCounter2 = 0
+    @Published var colorCounter3 = 0
+    
+    var secondColors: [(cor: UIColor, appeared: Bool)] = [
+        (UIColor(.purple), false),
+        (UIColor(.green), false),
+        (UIColor(.orange), false)
     ]
     
-    func magentaPress() {
-        pressedButtomColor = UIColor(ciColor: .magenta)
+    var thirdColors: [(cor: UIColor, appeared: Bool)] = [
+        ((UIColor.blend(color1: UIColor(.red), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)), false),
+        ((UIColor.blend(color1: UIColor(.red), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)), false),
+        ((UIColor.blend(color1: UIColor(.blue), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)), false),
+        ((UIColor.blend(color1: UIColor(.blue), intensity1: 0.5, color2: UIColor(.purple), intensity2: 0.5)), false),
+        ((UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.green), intensity2: 0.5)), false),
+        ((UIColor.blend(color1: UIColor(.yellow), intensity1: 0.5, color2: UIColor(.orange), intensity2: 0.5)), false)
+    ]
+    
+    func redPress() {
+        pressedButtomColor = UIColor(.red)
         fillColor()
     }
     
-    func cyanPress() {
-        pressedButtomColor = UIColor(.cyan)
+    func bluePress() {
+        pressedButtomColor = UIColor(.blue)
         fillColor()
     }
     
@@ -61,27 +70,78 @@ class DaVinciViewModel: ObservableObject {
     }
     
     func merge() {
-        mergedColor = UIColor.blend(color1: firstColor, intensity1: 0.5, color2: secondColor, intensity2: 0.5)
-        print(mergedColor.hash)
+        if (firstColor.hash == UIColor(.blue).hash) && (secondColor.hash == UIColor(.yellow).hash) || (firstColor.hash == UIColor(.yellow).hash) && (secondColor.hash == UIColor(.blue).hash) {
+            mergedColor = UIColor(.green)
+        }
+        else if (firstColor.hash == UIColor(.blue).hash) && (secondColor.hash == UIColor(.red).hash) || (firstColor.hash == UIColor(.red).hash) && (secondColor.hash == UIColor(.blue).hash) {
+            mergedColor = UIColor(.purple)
+        }
+        else if (firstColor.hash == UIColor(.red).hash) && (secondColor.hash == UIColor(.yellow).hash) || (firstColor.hash == UIColor(.yellow).hash) && (secondColor.hash == UIColor(.red).hash) {
+            mergedColor = UIColor(.orange)
+        }
+        else {
+            mergedColor = UIColor.blend(color1: firstColor, intensity1: 0.5, color2: secondColor, intensity2: 0.5)
+        }
+    }
+    
+    func randSecondColors(randomIndex: Int) {
+        if !secondColors[randomIndex].appeared {
+            randomColor = secondColors[randomIndex].cor
+            secondColors[randomIndex].appeared.toggle()
+        }
+        else {
+            randSecondColors(randomIndex: Int.random(in: 0..<3))
+        }
+    }
+    
+    func randThirdColors(randomIndex: Int) {
+        if !thirdColors[randomIndex].appeared {
+            randomColor = thirdColors[randomIndex].cor
+            thirdColors[randomIndex].appeared.toggle()
+        }
+        else {
+            randThirdColors(randomIndex: Int.random(in: 0..<6))
+        }
     }
     
     func makeRandomColor() {
-        let randomIndex = Int.random(in: 0..<12)
-        
-        randomColor = colors[randomIndex]
-        
+        if (colorCounter3 < 6) {
+            if !secondStage {
+                randSecondColors(randomIndex: Int.random(in: 0..<3))
+            }
+            else {
+                randThirdColors(randomIndex: Int.random(in: 0..<6))
+            }
+        }
     }
     
     func compareColors(){
-        var hashMerged: Int = mergedColor.hash
-        var hashRandom: Int = randomColor.hash
+        let hashMerged: Int = mergedColor.hash
+        let hashRandom: Int = randomColor.hash
         
         
         if (firstColor.hash != 65536) && (secondColor.hash != 65536) {
             if hashMerged == hashRandom {
-                print("############MEU DEUS ")
+                if !secondStage {
+                    colorCounter2 += 1
+                    if colorCounter2 == 3 {
+                        withAnimation {
+                            secondStage.toggle()
+                        }
+                        switchStagePopUp.toggle()
+                    }
+                } else {
+                    colorCounter3 += 1
+                    if colorCounter3 == 6 {
+                        endGamePopUp.toggle()
+                        gameEnded.toggle()
+                        print(gameEnded)
+                    }
+                }
+                makeRandomColor()
+                print("Sucesso")
             } else {
-                print("FRACASSO######")
+                print("Fracasso")
             }
         } else {
             print("Selecione uma cor")
