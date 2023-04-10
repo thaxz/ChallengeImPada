@@ -9,8 +9,11 @@ import SwiftUI
 
 struct DialogueView: View {
     @State var index: Int = 0
-    @State var characterName: GameCharacter = .arquis
+    //@State var characterName: GameCharacter = .arquis
+    @State var character: Character
+    
     let scene: DialogueScene
+    
     var body: some View {
             ZStack {
                 Color.theme.primary
@@ -40,6 +43,6 @@ struct DialogueView: View {
 
 struct DialogueView_Previews: PreviewProvider {
     static var previews: some View {
-        DialogueView(scene: Data().daVinciFirstScene)
+        DialogueView(character: CharactersData().daVinci, scene: Data().daVinciFirstScene)
     }
 }
