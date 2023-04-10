@@ -10,7 +10,6 @@ import SwiftUI
 struct DialogueView: View {
     @State var index: Int = 0
     @State var changeView: Bool = false
-    @State var character: Character
     
     let scene: DialogueScene
     
@@ -48,11 +47,5 @@ struct DialogueView: View {
                     
                 }
             }
-    }
-}
-
-struct DialogueView_Previews: PreviewProvider {
-    static var previews: some View {
-        DialogueView(character: CharactersData().daVinci, scene: Data().daVinciFirstScene)
     }
 }
