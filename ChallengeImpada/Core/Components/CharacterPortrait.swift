@@ -18,11 +18,11 @@ struct CharacterPortrait: View {
         
         switch character.name {
         case "Leonardo da Vinci":
-            image = "newtonPH"
-            name = "Newton"
-        case "Isaac Newton":
             image = "daVinciPH"
             name = "Da Vinci"
+        case "Isaac Newton":
+            image = "newtonPH"
+            name = "Newton"
         case "Alan Turing":
             image = "turingPH"
             name = "Alan Turing"
