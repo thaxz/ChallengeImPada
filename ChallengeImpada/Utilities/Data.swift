@@ -47,7 +47,7 @@ struct Data {
     
     let daVinciConclusionScene: DialogueScene = DialogueScene(
         dialogues: [
-        Dialogue(data: (character: .daVinci, text: "Isso agente! Conseguimos!")),
+        Dialogue(data: (character: .daVinci, text: "Isso pessoal! Conseguimos!")),
         Dialogue(data: (character: .daVinci, text: "Veja, temos todas as cores que precisamos, agora vamos colocá-las na minha máquina para devolvê-las para o mundo, rápido!")),
         Dialogue(data: (character: .arquis, text: "Está funcionando, Da Vinci!")),
         Dialogue(data: (character: .arquis, text: "O mundo tem cores novamente! Conseguimos, restauramos esse pedaço da linha do tempo!")),
@@ -62,7 +62,83 @@ struct Data {
         maxIndex: 10)
   
     
+    let newtonOnboardingScene: DialogueScene = DialogueScene(
+        dialogues: [
+            Dialogue(data: (character: .arquis, text: "Aiai, essa foi uma jornada e tanto né? Mas ainda não é hora de descansar!")),
+            Dialogue(data: (character: .arquis, text: "Agora estamos em 1666, o ano em que o físico Isaac Newton descobriu a gravidade…. Ou deveria ter descoberto.")),
+            Dialogue(data: (character: .arquis, text: "Como você pode ver parece que o Morcego impediu que isso acontecesse, por isso tudo está flutuando!")),
+            Dialogue(data: (character: .arquis, text: "Mas como será que ele fez isso?")),
+            Dialogue(data: (character: .arquis, text: "Segundo os livros de história, Newton descobriu a gravidade quando uma maçã caiu na cabeça dele.")),
+            Dialogue(data: (character: .arquis, text: "Pelo visto o vilão deve ter impedido que isso acontecesse.")),
+            Dialogue(data: (character: .arquis, text: "Bem então ach-…. AH CUIDADO UMA VACA FLUTUANTE!!!")),
+            Dialogue(data: (character: .arquis, text: "Ufa! Essa foi por pouco!")),
+            Dialogue(data: (character: .arquis, text: "Acho melhor a gente ir consertar logo isso antes que algo pior aconteça.")),
+            Dialogue(data: (character: .arquis, text: "Veja! O radar da nave diz que Newton está dormindo mais a frente, vamos pegar as maçãs pelo caminho, e tentar joga-las em sua cabeça para ele acordar!")),
+        ],
+        maxIndex: 9)
     
+    let newtonConclusionScene: DialogueScene = DialogueScene(
+        dialogues: [
+            Dialogue(data: (character: .newton, text: "Ai! Mas o que é que… Uma maçã? Deve ter caído na minha cabeça… Mas pera aí…")),
+            Dialogue(data: (character: .newton, text: "O que faz ela cair? E com força para me machucar também… Será que existe algum tipo de força invisível que move as coisas para baixo?")),
+            Dialogue(data: (character: .newton, text: "Isso parece muito interessante… Tenho que investigar!")),
+            Dialogue(data: (character: .newton, text: "Mas antes um lanchinho que essa sonequinha me deu fome.")),
+            Dialogue(data: (character: .arquis, text: "Veja! Newton conseguiu descobrir a gravidade, as coisas estão voltando ao normal, VIVA!")),
+            Dialogue(data: (character: .arquis, text: "Conseguimos frustrar os planos do Vilão Morcego mais uma vez hehe.")),
+            Dialogue(data: (character: .arquis, text: "Agora é hor…. AAAAAAAAAAAAAAA")),
+            Dialogue(data: (character: .arquis, text: "A GRAVIDADE VOLTOU E A NAVE TA CAÍNDOOOOOOO")),
+            Dialogue(data: (character: .arquis, text: "LIGA OS MOTORES RAPIDOOOOOOOOO")),
+            Dialogue(data: (character: .arquis, text: "AH PERA QUEM FAZ ISSO SOU EU AAAAAAAAA")),
+            Dialogue(data: (character: .arquis, text: "Ufa, essa foi por pouco!")),
+            Dialogue(data: (character: .arquis, text: "Acho melhor a gente sair logo daqui antes que mais alguma coisa aconteça.")),
+            Dialogue(data: (character: .arquis, text: "Hora da próxima parada!")),
+        ],
+        maxIndex: 12
+    )
     
+    let turingOnboardingScene: DialogueScene = DialogueScene(
+        dialogues: [
+            Dialogue(data: (character: .arquis, text: "Vamos lá, hora da próxima missão!")),
+            Dialogue(data: (character: .arquis, text: "Nós estamos no ano de 1941, nessa época os computadores estavam começando a surgir graças ao avanço de Alan Turing, um grande cientista da computação!")),
+            Dialogue(data: (character: .arquis, text: "Mas acho que há algo errado… Nenhum dos computadores parece funcionar. E as pessoas estão desesperadas.")),
+            Dialogue(data: (character: .arquis, text: "Não conseguem encontrar Turing em lugar nenhum!")),
+            Dialogue(data: (character: .arquis, text: "Isso só pode ter sido obra dele… o Vilão deve ter colocado um bug nos computadores, e sequestrado Turing para que ele não consertasse os erros!")),
+            Dialogue(data: (character: .arquis, text: "Temos que encontrá-lo rápido e consertar os computadores antes que o pior aconteça!")),
+            Dialogue(data: (character: .arquis, text: "AHÁ!")),
+            Dialogue(data: (character: .arquis, text: "Veja, a nave conseguiu rastrear Turing, parece que ele está preso dentro de um porão.")),
+            Dialogue(data: (character: .arquis, text: "Droga, é como eu pensava…")),
+            Dialogue(data: (character: .arquis, text: "O Morcego, usou tecnologia do futuro para prendê-lo lá, não vamos conseguir soltá-lo… e agora?")),
+            Dialogue(data: (character: .arquis, text: "A menos que… ISSO! Parece que o Morcego, esqueceu de levar o telefone de Turing, acho que conseguimos ligar para ele.")),
+            Dialogue(data: (character: .turing, text: "Alô?")),
+            Dialogue(data: (character: .arquis, text: "Turing! Não há muito tempo para explicar mas estamos do seu lado!")),
+            Dialogue(data: (character: .arquis, text: "O Vilão que te prendeu ai colocou vários bugs nos computadores, e precisamos de você para desligá-los antes que o pior aconteça!")),
+            Dialogue(data: (character: .arquis, text: "Pode nos ajudar?")),
+            Dialogue(data: (character: .turing, text: "Entendi… Se o que vocês falam é verdade não temos tempo a perder!")),
+            Dialogue(data: (character: .turing, text: "Vou passar para vocês o código que consegue reiniciar o sistema dos computadores para que eles se livrem dos bugs.")),
+            Dialogue(data: (character: .turing, text: "O problema é que esse código também pode ser usado para tomar total controle deles.")),
+            Dialogue(data: (character: .turing, text: "Se o Vilão, descobrir não terá mais jeito de reverter.")),
+            Dialogue(data: (character: .turing, text: "Prestem bastante atenção, vou enviar uma mensagem criptografada caso ele esteja ouvindo.")),
+            Dialogue(data: (character: .turing, text: "Confio que vocês serão capazes de decifrar a mensagem e salvar o mundo!")),
+        ],
+        maxIndex: 20)
+    
+    let turingConclusionScene: DialogueScene = DialogueScene(
+        dialogues: [
+            Dialogue(data: (character: .arquis, text: "Conseguimos!!!")),
+            Dialogue(data: (character: .arquis, text: "Desciframos a mensagem de Turing!")),
+            Dialogue(data: (character: .arquis, text: "Rápido, vamos colocar o código no computador antes que não tenha mais volta!")),
+            Dialogue(data: (character: .arquis, text: "Muito bem! Parece estar funcionando!")),
+            Dialogue(data: (character: .arquis, text: "Veja, até a porta que prendia Turing está se abrindo!")),
+            Dialogue(data: (character: .arquis, text: "Isso significa que o Vilão fracassou e fugiu mais uma vez…")),
+            Dialogue(data: (character: .arquis, text: "VENCEMOS DE NOVO!!!!!!!")),
+            Dialogue(data: (character: .turing, text: "Finalmente estou livre!")),
+            Dialogue(data: (character: .turing, text: "Obrigado meus amigos, se não fosse por vocês eu não sei por quanto tempo ficaria naquele quarto fedido,")),
+            Dialogue(data: (character: .turing, text: "Agora se me dão licença, ainda tenho muitas coisas a fazer, os computadores foram limpos, mas estão longes de ser perfeitos.")),
+            Dialogue(data: (character: .arquis, text: "Com toda certeza vovô- digo Senhor Turing!")),
+            Dialogue(data: (character: .arquis, text: "Continue melhorando eles e um dia eles serão extremamente charmosos e divertidos ;)")),
+            Dialogue(data: (character: .arquis, text: "Bem está na hora de nós irmos!")),
+            Dialogue(data: (character: .arquis, text: "Nosso próximo destino nos aguarda…")),
+    ],
+        maxIndex: 13)
     
 }
