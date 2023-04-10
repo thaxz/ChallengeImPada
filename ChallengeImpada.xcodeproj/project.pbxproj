@@ -11,6 +11,7 @@
 		8F0E47BA29DCAE6D00E73DBD /* EndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E47B929DCAE6D00E73DBD /* EndGameView.swift */; };
 		8F0E47BC29DCB35900E73DBD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E47BB29DCB35900E73DBD /* View.swift */; };
 		8F0E47BE29DCB41400E73DBD /* DaVinciTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E47BD29DCB41400E73DBD /* DaVinciTutorialView.swift */; };
+		8F14EBA429E4924E008BC3EB /* CharactersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F14EBA329E4924E008BC3EB /* CharactersData.swift */; };
 		8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */; };
 		8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */; };
 		8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */; };
@@ -28,7 +29,6 @@
 		E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91A580329C8F67E0055EDB3 /* ContentView.swift */; };
 		E91A580629C8F67F0055EDB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580529C8F67F0055EDB3 /* Assets.xcassets */; };
 		E91A580929C8F67F0055EDB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */; };
-		E947446329D4B5B700A3916A /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446229D4B5B700A3916A /* GameCharacter.swift */; };
 		E947446529D4B75E00A3916A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446429D4B75E00A3916A /* Character.swift */; };
 		E947446729D4B86000A3916A /* DialogueScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446629D4B86000A3916A /* DialogueScene.swift */; };
 		E974C2AB29D360FA00F2D592 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AA29D360FA00F2D592 /* Color.swift */; };
@@ -61,6 +61,7 @@
 		8F0E47B929DCAE6D00E73DBD /* EndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameView.swift; sourceTree = "<group>"; };
 		8F0E47BB29DCB35900E73DBD /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8F0E47BD29DCB41400E73DBD /* DaVinciTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaVinciTutorialView.swift; sourceTree = "<group>"; };
+		8F14EBA329E4924E008BC3EB /* CharactersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersData.swift; sourceTree = "<group>"; };
 		8F3EB1E729D4BEB90045EEE7 /* MuseuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewModel.swift; sourceTree = "<group>"; };
 		8F3EB1E929D4BECA0045EEE7 /* MuseuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuView.swift; sourceTree = "<group>"; };
 		8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		E91A580329C8F67E0055EDB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E91A580529C8F67F0055EDB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E947446229D4B5B700A3916A /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
 		E947446429D4B75E00A3916A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E947446629D4B86000A3916A /* DialogueScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueScene.swift; sourceTree = "<group>"; };
 		E974C2AA29D360FA00F2D592 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 			children = (
 				E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */,
 				E974C2D929D37F0300F2D592 /* Data.swift */,
-				E947446229D4B5B700A3916A /* GameCharacter.swift */,
+				8F14EBA329E4924E008BC3EB /* CharactersData.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -557,10 +557,10 @@
 				E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */,
 				8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */,
 				E974C2B329D369DA00F2D592 /* CreditsViewModel.swift in Sources */,
-				E947446329D4B5B700A3916A /* GameCharacter.swift in Sources */,
 				8F0E47BE29DCB41400E73DBD /* DaVinciTutorialView.swift in Sources */,
 				E974C2DA29D37F0300F2D592 /* Data.swift in Sources */,
 				E974C2B529D369EB00F2D592 /* LevelSelectionView.swift in Sources */,
+				8F14EBA429E4924E008BC3EB /* CharactersData.swift in Sources */,
 				E974C2B729D369F600F2D592 /* LevelSelectionViewModel.swift in Sources */,
 				E974C2B129D369D000F2D592 /* CreditsView.swift in Sources */,
 				E974C2D229D36DA700F2D592 /* DialogueViewModel.swift in Sources */,

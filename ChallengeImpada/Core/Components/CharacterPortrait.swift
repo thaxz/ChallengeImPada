@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct CharacterPortrait: View {
+    
     var image: String = ""
     var name: String = ""
-    let character: GameCharacter
+    let character: Character
     
-    init(character: GameCharacter) {
+    init(character: Character) {
         self.character = character
         
-        switch character {
-        case .newton:
+        switch character.name {
+        case "Leonardo da Vinci":
             image = "newtonPH"
             name = "Newton"
-        case .daVinci:
+        case "Isaac Newton":
             image = "daVinciPH"
             name = "Da Vinci"
-        case .turing:
+        case "Alan Turing":
             image = "turingPH"
             name = "Alan Turing"
-        case .arquis:
+        default:
             image = "arquisPH"
             name = "ARQUIS"
         }
@@ -50,6 +51,6 @@ struct CharacterPortrait: View {
 
 struct CharacterPortrait_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterPortrait(character: .arquis)
+        CharacterPortrait(character: CharactersData().daVinci)
     }
 }

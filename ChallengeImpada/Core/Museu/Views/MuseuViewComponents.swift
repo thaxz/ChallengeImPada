@@ -8,7 +8,9 @@
 import SwiftUI
 
 extension MuseuView {
+    
     var carouselBody: some View {
+        
         GeometryReader { reader in
             let screenSize = reader.size
             ZStack {
@@ -29,15 +31,19 @@ extension MuseuView {
                                     
                                     Image.theme.arrowDown
                                     
-                                    character.imagePortrait
-                                        .scaledToFill()
-                                        .frame(width: screenSize.width / 3,
-                                               height: screenSize.height / 2)
+                                    NavigationLink (destination: CharacterDetailsView(character: character)) {
+                                        character.imagePortrait
+                                            .scaledToFill()
+                                            .frame(width: screenSize.width / 3,
+                                                   height: screenSize.height / 2)
+                                    }
                                     
-                                    Text("ver perfil")
-                                        .foregroundColor(Color.theme.accent)
-                                        .font(.system(size: 24, weight: .regular))
-                                        .underline(true, color: Color.theme.accent)
+                                    NavigationLink (destination: CharacterDetailsView(character: character)) {
+                                        Text("ver perfil")
+                                            .foregroundColor(Color.theme.accent)
+                                            .font(.system(size: 24, weight: .regular))
+                                            .underline(true, color: Color.theme.accent)
+                                    }
                                 }
                                 
                                 .frame(width: screenSize.width/3)
