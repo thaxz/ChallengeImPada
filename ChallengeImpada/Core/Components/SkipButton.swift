@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SkipButton: View {
+    
     var body: some View {
         NavigationLink (destination: LevelSelectionView()) {
             ZStack{
