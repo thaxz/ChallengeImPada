@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Data {
     
@@ -20,7 +21,9 @@ struct Data {
         Dialogue(data: (character: .arquis, text: "Lá vamos encontrar figuras históricas que vão nos ajudar, e com eles do nosso lado vamos salvar o mundo!")),
         Dialogue(data: (character: .arquis, text: "Está preparado? Então vamos nessa!")),
     ],
-        maxIndex: 7)
+        maxIndex: 7,
+        whichViewNavigateTo: AnyView(LevelSelectionView())
+    )
     
     
     let daVinciOnboardingScene: DialogueScene = DialogueScene(
@@ -43,7 +46,9 @@ struct Data {
         Dialogue(data: (character: .daVinci, text: "Vamos, está pronto para me ajudar a restaurar as cores do mundo?")),
         Dialogue(data: (character: .daVinci, text: "Hora de acabarmos com o plano desse Morcego!")),
     ],
-        maxIndex: 16)
+        maxIndex: 16,
+        whichViewNavigateTo: AnyView(DaVinciView())
+    )
     
     let daVinciConclusionScene: DialogueScene = DialogueScene(
         dialogues: [
@@ -59,7 +64,9 @@ struct Data {
         Dialogue(data: (character: .arquis, text: "Então vamos lá")),
         Dialogue(data: (character: .arquis, text: "Hora da nossa próxima parada nessa aventura pelo tempo!")),
     ],
-        maxIndex: 10)
+        maxIndex: 10,
+        whichViewNavigateTo: AnyView(LevelSelectionView())
+    )
   
     
     let newtonOnboardingScene: DialogueScene = DialogueScene(
@@ -75,7 +82,9 @@ struct Data {
             Dialogue(data: (character: .arquis, text: "Acho melhor a gente ir consertar logo isso antes que algo pior aconteça.")),
             Dialogue(data: (character: .arquis, text: "Veja! O radar da nave diz que Newton está dormindo mais a frente, vamos pegar as maçãs pelo caminho, e tentar joga-las em sua cabeça para ele acordar!")),
         ],
-        maxIndex: 9)
+        maxIndex: 9,
+        whichViewNavigateTo: AnyView(NewtonView())
+    )
     
     let newtonConclusionScene: DialogueScene = DialogueScene(
         dialogues: [
@@ -93,7 +102,8 @@ struct Data {
             Dialogue(data: (character: .arquis, text: "Acho melhor a gente sair logo daqui antes que mais alguma coisa aconteça.")),
             Dialogue(data: (character: .arquis, text: "Hora da próxima parada!")),
         ],
-        maxIndex: 12
+        maxIndex: 12,
+        whichViewNavigateTo: AnyView(LevelSelectionView())
     )
     
     let turingOnboardingScene: DialogueScene = DialogueScene(
@@ -120,7 +130,9 @@ struct Data {
             Dialogue(data: (character: .turing, text: "Prestem bastante atenção, vou enviar uma mensagem criptografada caso ele esteja ouvindo.")),
             Dialogue(data: (character: .turing, text: "Confio que vocês serão capazes de decifrar a mensagem e salvar o mundo!")),
         ],
-        maxIndex: 20)
+        maxIndex: 20,
+        whichViewNavigateTo: AnyView(TuringView())
+    )
     
     let turingConclusionScene: DialogueScene = DialogueScene(
         dialogues: [
@@ -139,6 +151,8 @@ struct Data {
             Dialogue(data: (character: .arquis, text: "Bem está na hora de nós irmos!")),
             Dialogue(data: (character: .arquis, text: "Nosso próximo destino nos aguarda…")),
     ],
-        maxIndex: 13)
+        maxIndex: 13,
+        whichViewNavigateTo: AnyView(LevelSelectionView())
+    )
     
 }
