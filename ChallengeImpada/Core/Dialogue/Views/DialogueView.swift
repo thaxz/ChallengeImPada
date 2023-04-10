@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DialogueView: View {
     @State var index: Int = 0
-    @State var characterName: GameCharacter = .arquis
     @State var changeView: Bool = false
     let scene: DialogueScene
     var body: some View {
