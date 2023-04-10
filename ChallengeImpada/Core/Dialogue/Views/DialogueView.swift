@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DialogueView: View {
     @State var index: Int = 0
-    //@State var characterName: GameCharacter = .arquis
+    @State var changeView: Bool = false
     @State var character: Character
     
     let scene: DialogueScene
@@ -25,17 +25,27 @@ struct DialogueView: View {
                             } label: { SkipButton() }
                     }
                     Spacer()
-                    HStack(alignment: .bottom, spacing: 16){
-                        CharacterPortrait(character: scene.dialogues[index].data.character)
-                        DialogueContainer(text: scene.dialogues[index].data.text)
-                            .onTapGesture {
-                                index += 1
-                                if index > scene.maxIndex {
-                                    self.index = 0
-                                    // change game scene
+                    
+                    NavigationLink(destination: scene.whichViewNavigateTo, isActive: $changeView) {
+                        
+                        HStack(alignment: .bottom, spacing: 16){
+                            
+                            CharacterPortrait(character: scene.dialogues[index].data.character)
+                            DialogueContainer(text: scene.dialogues[index].data.text)
+                                .onTapGesture {
+                                    print(index)
+                                    if index < scene.maxIndex {
+                                        index += 1
+                                    } else {
+                                        self.changeView.toggle()
+                                    }
+                                    
+                                    
                                 }
-                            }
+                        }
                     }
+                    
+                    
                 }
             }
     }

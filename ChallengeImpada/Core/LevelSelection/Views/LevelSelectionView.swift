@@ -15,7 +15,7 @@ struct LevelSelectionView: View {
             
             VStack(spacing: 16.0) {
                 
-                NavigationLink (destination: DaVinciView()) {
+                NavigationLink (destination: DialogueView(scene: Data().daVinciOnboardingScene)) {
                     ZStack{
                         Rectangle()
                             .border(.white, width: 5)
@@ -26,7 +26,7 @@ struct LevelSelectionView: View {
                     }
                     .frame(width: 360, height: 120)
                 }
-                NavigationLink (destination: NewtonView()) {
+                NavigationLink (destination: DialogueView(scene: Data().newtonOnboardingScene)) {
                     ZStack{
                         Rectangle()
                             .border(.white, width: 5)
@@ -37,7 +37,7 @@ struct LevelSelectionView: View {
                     }
                     .frame(width: 360, height: 120)
                 }
-                NavigationLink (destination: TuringView()) {
+                NavigationLink (destination: DialogueView(scene: Data().turingOnboardingScene)) {
                     ZStack{
                         Rectangle()
                             .border(.white, width: 5)
