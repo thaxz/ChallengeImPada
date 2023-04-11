@@ -23,7 +23,7 @@ struct DialogueView: View {
                     Button(action: {
                         self.changeView.toggle()
                     }) {
-                        SkipButton()
+                        SkipButton(destination: scene.whichViewNavigateTo)
                     }
                 }
                 Spacer()
