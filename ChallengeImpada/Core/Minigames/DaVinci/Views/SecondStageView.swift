@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SecondStageView: View {
     var body: some View {
-        Text("APARECI CARALHO")
+        Image("SecondView")
     }
 }
 
