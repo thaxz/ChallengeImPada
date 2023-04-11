@@ -9,18 +9,23 @@ import SwiftUI
 import SpriteKit
 
 struct NewtonView: View {
-    @StateObject private var game = NewtonScene()
+    
+    @StateObject private var game: NewtonScene
+    
+    init(){
+        _game = StateObject(wrappedValue: NewtonScene())
+    }
+    
     var body: some View {
         ZStack {
-            HStack {
-                SpriteView(scene: NewtonScene())
-                    .ignoresSafeArea()
+            SpriteView(scene: NewtonScene())
+                        .ignoresSafeArea()
+            if game.isGameOver {
+                Color.pink
             }
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
-            .ignoresSafeArea()
-            
+
         }
+        
     }
 }
 

@@ -21,7 +21,8 @@ class NewtonScene: SKScene, ObservableObject {
     
     var velocity: Double = 100
     var gameArea: CGFloat = 900.0
-    var flyForce: CGFloat = 28.0
+    var flyForce: CGFloat = 500.0
+    //28
     
     var timer: Timer!
     
@@ -40,7 +41,6 @@ class NewtonScene: SKScene, ObservableObject {
     
     
     override func didMove(to view: SKView) {
-        
         self.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         scene?.scaleMode = .fill
         
@@ -130,18 +130,18 @@ class NewtonScene: SKScene, ObservableObject {
     
     // Adicionando dragão
     func addPlayer(){
-        player = SKSpriteNode(imageNamed: "player1")
+        player = SKSpriteNode(imageNamed: "Pre-comp100")
         player.zPosition = 4
         player.position = CGPoint(x: 60, y: size.height - gameArea/2)
-        
+        player.setScale(0.25)
         // add texturas
         var playerTextures = [SKTexture]()
         // Pegando meus sprites
-        for i in 1...4 {
-            playerTextures.append(SKTexture(imageNamed: "player\(i)"))
+        for i in 100...147 {
+            playerTextures.append(SKTexture(imageNamed: "Pre-comp\(i)"))
         }
         // criando animação
-        let animationAction = SKAction.animate(with: playerTextures, timePerFrame: 0.09)
+        let animationAction = SKAction.animate(with: playerTextures, timePerFrame: 0.041)
         // deixando em loop
         let repeatAction = SKAction.repeatForever(animationAction)
         // Colocando a animação no player
@@ -150,18 +150,18 @@ class NewtonScene: SKScene, ObservableObject {
         addChild(player)
     }
     
-//    func addScore(){
-//        // ajustando a fonte
-//        //scoreLabel.fontSize = 45
-//        scoreLabel.text = "\(score)"
-//        scoreLabel.alpha = 0.8
-//
-//        scoreLabel.zPosition = 5
-//        scoreLabel.position = CGPoint(x: size.width/2, y: size.height - 100)
-//
-//       // addChild(scoreLabel)
-//
-//    }
+    //    func addScore(){
+    //        // ajustando a fonte
+    //        //scoreLabel.fontSize = 45
+    //        scoreLabel.text = "\(score)"
+    //        scoreLabel.alpha = 0.8
+    //
+    //        scoreLabel.zPosition = 5
+    //        scoreLabel.position = CGPoint(x: size.width/2, y: size.height - 100)
+    //
+    //       // addChild(scoreLabel)
+    //
+    //    }
     
     // Método de spawnar inimigos
     func spawnEnemies(){
@@ -251,6 +251,9 @@ class NewtonScene: SKScene, ObservableObject {
         // finalizadno o jogo
         gameFinished = true
         gameStarted = false
+        isGameOver = true
+//        isGameOver.toggle()
+        print("PERDEUUUUUUUU")
         
         // aparecendo mensagem de gameOver
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
@@ -274,7 +277,7 @@ class NewtonScene: SKScene, ObservableObject {
             if !gameStarted {
                 // tirando a intro da tela
                 intro.removeFromParent()
-               // addScore()
+                // addScore()
                 
                 // adicionando física ao player
                 player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width/2 - 10)
@@ -344,7 +347,7 @@ extension NewtonScene: SKPhysicsContactDelegate {
             if contact.bodyA.categoryBitMask == scoreCategory || contact.bodyB.categoryBitMask == scoreCategory {
                 // significa que aumentou um ponto
                 score += 1
-              //  scoreLabel.text = "\(score)"
+                //  scoreLabel.text = "\(score)"
                 // som de ponto
                 run(scoreSound)
             } else if contact.bodyA.categoryBitMask == enemyCategory || contact.bodyB.categoryBitMask == enemyCategory {
