@@ -22,6 +22,11 @@ struct ImageTheme2D {
     let squareButton = Image("squareButton")
     let starButton = Image("starButton")
     let triangleButton = Image("triangleButton")
+    let redSymbol = Image("redSymbol")
+    let greenSymbol = Image("greenSymbol")
+    let blueSymbol = Image("blueSymbol")
+    let yellowSymbol = Image("yellowSymbol")
+    let telephone = Image("telephone")
     
 }
 

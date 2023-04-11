@@ -39,10 +39,10 @@ class SymbolViewModel: ObservableObject {
 }
 
 let symbolsData = [
-    Symbol(symbolImage: Image.theme.starButton, symbolSound: "starSound"),
-    Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound"),
-    Symbol(symbolImage: Image.theme.squareButton, symbolSound: "squareSound"),
-    Symbol(symbolImage: Image.theme.triangleButton, symbolSound: "triangleSound")
+    Symbol(symbolImage: Image.theme.greenSymbol, symbolSound: "greenSymbol"),
+    Symbol(symbolImage: Image.theme.redSymbol, symbolSound: "redSymbol"),
+    Symbol(symbolImage: Image.theme.yellowSymbol, symbolSound: "yellowSound"),
+    Symbol(symbolImage: Image.theme.blueSymbol, symbolSound: "blueSound")
 ]
 
 let phrases: [String] = []

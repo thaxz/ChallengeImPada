@@ -21,6 +21,9 @@
 		A4478BF929D4C7A400229AA6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478BF829D4C7A400229AA6 /* Image.swift */; };
 		A4478C1529D61AC400229AA6 /* MuseuViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478C1429D61AC400229AA6 /* MuseuViewComponents.swift */; };
 		A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4946EE129D37CE70045F4BF /* HomeComponents.swift */; };
+		A4CDA3A329E5D267006C32FE /* TuringTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3A229E5D267006C32FE /* TuringTestView.swift */; };
+		A4CDA3A529E5D448006C32FE /* RadialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3A429E5D448006C32FE /* RadialBackground.swift */; };
+		A4CDA3A929E5E43F006C32FE /* TestingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3A829E5E43F006C32FE /* TestingScale.swift */; };
 		CA80D6E429D4C30400A1DC2E /* CharacterDetailsComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80D6E329D4C30400A1DC2E /* CharacterDetailsComponentsView.swift */; };
 		CADFFB0229D3703B000923FA /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFFB0129D3703B000923FA /* CharacterDetailsView.swift */; };
 		CADFFB0429D37E20000923FA /* spongecharacter.scn in Resources */ = {isa = PBXBuildFile; fileRef = CADFFB0329D37E20000923FA /* spongecharacter.scn */; };
@@ -71,6 +74,9 @@
 		A4478BF829D4C7A400229AA6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4478C1429D61AC400229AA6 /* MuseuViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewComponents.swift; sourceTree = "<group>"; };
 		A4946EE129D37CE70045F4BF /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
+		A4CDA3A229E5D267006C32FE /* TuringTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringTestView.swift; sourceTree = "<group>"; };
+		A4CDA3A429E5D448006C32FE /* RadialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialBackground.swift; sourceTree = "<group>"; };
+		A4CDA3A829E5E43F006C32FE /* TestingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingScale.swift; sourceTree = "<group>"; };
 		CA80D6E329D4C30400A1DC2E /* CharacterDetailsComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsComponentsView.swift; sourceTree = "<group>"; };
 		CADFFB0129D3703B000923FA /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 		CADFFB0329D37E20000923FA /* spongecharacter.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = spongecharacter.scn; sourceTree = "<group>"; };
@@ -372,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				E974C2BE29D36A2800F2D592 /* TuringView.swift */,
+				A4CDA3A229E5D267006C32FE /* TuringTestView.swift */,
+				A4CDA3A829E5E43F006C32FE /* TestingScale.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -428,6 +436,7 @@
 				8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */,
 				A4478BF829D4C7A400229AA6 /* Image.swift */,
 				8F0E47BB29DCB35900E73DBD /* View.swift */,
+				A4CDA3A429E5D448006C32FE /* RadialBackground.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -557,6 +566,7 @@
 				E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */,
 				8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */,
 				E974C2B329D369DA00F2D592 /* CreditsViewModel.swift in Sources */,
+				A4CDA3A929E5E43F006C32FE /* TestingScale.swift in Sources */,
 				8F0E47BE29DCB41400E73DBD /* DaVinciTutorialView.swift in Sources */,
 				E974C2DA29D37F0300F2D592 /* Data.swift in Sources */,
 				E974C2B529D369EB00F2D592 /* LevelSelectionView.swift in Sources */,
@@ -577,6 +587,7 @@
 				E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */,
 				8F0E47BC29DCB35900E73DBD /* View.swift in Sources */,
 				CA80D6E429D4C30400A1DC2E /* CharacterDetailsComponentsView.swift in Sources */,
+				A4CDA3A529E5D448006C32FE /* RadialBackground.swift in Sources */,
 				E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */,
 				A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */,
 				E947446729D4B86000A3916A /* DialogueScene.swift in Sources */,
@@ -587,6 +598,7 @@
 				E974C2D829D372C300F2D592 /* CharacterPortrait.swift in Sources */,
 				8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */,
 				8F0E47B629DCA5CB00E73DBD /* SecondStageView.swift in Sources */,
+				A4CDA3A329E5D267006C32FE /* TuringTestView.swift in Sources */,
 				E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */,
 				E974C2D029D36D7600F2D592 /* DialogueView.swift in Sources */,
 				A4478BF929D4C7A400229AA6 /* Image.swift in Sources */,

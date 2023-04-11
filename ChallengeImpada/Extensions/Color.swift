@@ -18,6 +18,9 @@ struct ColorTheme {
     let primary = Color("PrimaryColor")
     let secondary = Color("SecondaryColor")
     let accent = Color("AccentColor")
+    let darkGreen = Color("darkGreen")
+    let lightGreen = Color("lightGreen")
+    let testeGreen = Color("testeGreen")
     
 }
 
