@@ -31,6 +31,11 @@
 		E91A580929C8F67F0055EDB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */; };
 		E947446529D4B75E00A3916A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446429D4B75E00A3916A /* Character.swift */; };
 		E947446729D4B86000A3916A /* DialogueScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947446629D4B86000A3916A /* DialogueScene.swift */; };
+		E95AAB0C29DCA2D600899952 /* score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E95AAB0929DCA2D600899952 /* score.mp3 */; };
+		E95AAB0D29DCA2D600899952 /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E95AAB0A29DCA2D600899952 /* hit.mp3 */; };
+		E95AAB0E29DCA2D600899952 /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E95AAB0B29DCA2D600899952 /* music.m4a */; };
+		E95AAB1029DCA57200899952 /* NewtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95AAB0F29DCA57200899952 /* NewtonView.swift */; };
+		E95AAB1229DCB0C600899952 /* NewtonScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95AAB1129DCB0C600899952 /* NewtonScene2.swift */; };
 		E974C2AB29D360FA00F2D592 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AA29D360FA00F2D592 /* Color.swift */; };
 		E974C2AD29D369B500F2D592 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AC29D369B500F2D592 /* HomeView.swift */; };
 		E974C2AF29D369C000F2D592 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2AE29D369C000F2D592 /* HomeViewModel.swift */; };
@@ -43,7 +48,7 @@
 		E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2BC29D36A1F00F2D592 /* TuringViewModel.swift */; };
 		E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2BE29D36A2800F2D592 /* TuringView.swift */; };
 		E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C029D36A3500F2D592 /* NewtonViewModel.swift */; };
-		E974C2C329D36A4200F2D592 /* NewtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C229D36A4200F2D592 /* NewtonView.swift */; };
+		E974C2C329D36A4200F2D592 /* NewtonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C229D36A4200F2D592 /* NewtonScene.swift */; };
 		E974C2C529D36A5200F2D592 /* AnyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C429D36A5200F2D592 /* AnyComponent.swift */; };
 		E974C2C729D36A5B00F2D592 /* Dialogues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C629D36A5B00F2D592 /* Dialogues.swift */; };
 		E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */; };
@@ -82,6 +87,11 @@
 		E91A580829C8F67F0055EDB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E947446429D4B75E00A3916A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E947446629D4B86000A3916A /* DialogueScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueScene.swift; sourceTree = "<group>"; };
+		E95AAB0929DCA2D600899952 /* score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = score.mp3; sourceTree = "<group>"; };
+		E95AAB0A29DCA2D600899952 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
+		E95AAB0B29DCA2D600899952 /* music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.m4a; sourceTree = "<group>"; };
+		E95AAB0F29DCA57200899952 /* NewtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonView.swift; sourceTree = "<group>"; };
+		E95AAB1129DCB0C600899952 /* NewtonScene2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonScene2.swift; sourceTree = "<group>"; };
 		E974C2AA29D360FA00F2D592 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E974C2AC29D369B500F2D592 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E974C2AE29D369C000F2D592 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -94,7 +104,7 @@
 		E974C2BC29D36A1F00F2D592 /* TuringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringViewModel.swift; sourceTree = "<group>"; };
 		E974C2BE29D36A2800F2D592 /* TuringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringView.swift; sourceTree = "<group>"; };
 		E974C2C029D36A3500F2D592 /* NewtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonViewModel.swift; sourceTree = "<group>"; };
-		E974C2C229D36A4200F2D592 /* NewtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonView.swift; sourceTree = "<group>"; };
+		E974C2C229D36A4200F2D592 /* NewtonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonScene.swift; sourceTree = "<group>"; };
 		E974C2C429D36A5200F2D592 /* AnyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyComponent.swift; sourceTree = "<group>"; };
 		E974C2C629D36A5B00F2D592 /* Dialogues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogues.swift; sourceTree = "<group>"; };
 		E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUtilities.swift; sourceTree = "<group>"; };
@@ -198,6 +208,7 @@
 		E91A580029C8F67E0055EDB3 /* ChallengeImpada */ = {
 			isa = PBXGroup;
 			children = (
+				E95AAB0829DCA2D600899952 /* Music */,
 				A4478BF529D4C74F00229AA6 /* CharacterViewModel */,
 				E91A580129C8F67E0055EDB3 /* ChallengeImpadaApp.swift */,
 				E91A580329C8F67E0055EDB3 /* ContentView.swift */,
@@ -387,7 +398,9 @@
 		E91A582229C8F8140055EDB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E974C2C229D36A4200F2D592 /* NewtonView.swift */,
+				E974C2C229D36A4200F2D592 /* NewtonScene.swift */,
+				E95AAB0F29DCA57200899952 /* NewtonView.swift */,
+				E95AAB1129DCB0C600899952 /* NewtonScene2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +462,16 @@
 				E974C2CA29D36A7800F2D592 /* AnyService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E95AAB0829DCA2D600899952 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				E95AAB0929DCA2D600899952 /* score.mp3 */,
+				E95AAB0A29DCA2D600899952 /* hit.mp3 */,
+				E95AAB0B29DCA2D600899952 /* music.m4a */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		E974C2CC29D36D3300F2D592 /* Dialogue */ = {
@@ -536,7 +559,10 @@
 			files = (
 				CADFFB0429D37E20000923FA /* spongecharacter.scn in Resources */,
 				E91A580929C8F67F0055EDB3 /* Preview Assets.xcassets in Resources */,
+				E95AAB0E29DCA2D600899952 /* music.m4a in Resources */,
 				E91A580629C8F67F0055EDB3 /* Assets.xcassets in Resources */,
+				E95AAB0C29DCA2D600899952 /* score.mp3 in Resources */,
+				E95AAB0D29DCA2D600899952 /* hit.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E974C2D429D36EF900F2D592 /* SkipButton.swift in Sources */,
+				E95AAB1029DCA57200899952 /* NewtonView.swift in Sources */,
 				E91A580429C8F67E0055EDB3 /* ContentView.swift in Sources */,
 				E974C2AD29D369B500F2D592 /* HomeView.swift in Sources */,
 				E91A580229C8F67E0055EDB3 /* ChallengeImpadaApp.swift in Sources */,
@@ -572,6 +599,7 @@
 				8F3EB1EE29D4D5C00045EEE7 /* DaVinciComponents.swift in Sources */,
 				A429BB9629DCAFD0007E3BA1 /* Symbol.swift in Sources */,
 				E974C2D629D3729600F2D592 /* DialogueContainer.swift in Sources */,
+				E95AAB1229DCB0C600899952 /* NewtonScene2.swift in Sources */,
 				E974C2C529D36A5200F2D592 /* AnyComponent.swift in Sources */,
 				E974C2AB29D360FA00F2D592 /* Color.swift in Sources */,
 				E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */,
@@ -580,7 +608,7 @@
 				E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */,
 				A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */,
 				E947446729D4B86000A3916A /* DialogueScene.swift in Sources */,
-				E974C2C329D36A4200F2D592 /* NewtonView.swift in Sources */,
+				E974C2C329D36A4200F2D592 /* NewtonScene.swift in Sources */,
 				E974C2B929D36A0500F2D592 /* DaVinciView.swift in Sources */,
 				E974C2BB29D36A1000F2D592 /* DaVinciViewModel.swift in Sources */,
 				E947446529D4B75E00A3916A /* Character.swift in Sources */,
