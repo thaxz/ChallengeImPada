@@ -2,11 +2,11 @@ import SwiftUI
 import Combine
 
 struct TestingScale: View {
-    @State private var symbolsViewModel = SymbolViewModel()
-    @State private var currentIndex: Int = 0
     
-    // Cria um timer publisher que emite um valor a cada 3 segundos
-    let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    @State var animationGreenButton: Bool = false
+    @State var animationRedButton: Bool = false
+    @State var animationBlueButton: Bool = false
+    @State var animationYellowButton: Bool = false
     
     var body: some View {
         let symbols = [
@@ -15,7 +15,6 @@ struct TestingScale: View {
             Symbol(symbolImage: Image.theme.blueSymbol, symbolSound: "blueSymbol"),
             Symbol(symbolImage: Image.theme.yellowSymbol, symbolSound: "yellowSymbol"),
         ]
-        var pressedSymbols: [Symbol] = []
         
         ZStack (alignment: .bottom) {
             RadialBackground()
@@ -25,23 +24,184 @@ struct TestingScale: View {
                 .scaledToFit()
                 .padding(.bottom, -22)
             
-            ForEach(0..<symbols.count, id: \.self) { index in
-                symbols[index].symbolImage
-                    .resizable()
-                    .scaledToFit()
-                    .opacity(currentIndex == index ? 1 : 0)
-                    .animation(.easeInOut(duration: 0.5))
+            VStack (spacing: 40) {
+                
+                HStack (spacing: 48) {
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Image.theme.greenSymbol
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .scaleEffect(animationGreenButton ? 1.2 : 1.0)
+                    .id("greenButton")
+                    
+                    
+                    Button(action: {
+                        //
+                    }) {
+                        Image.theme.redSymbol
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .scaleEffect(animationRedButton ? 1.2 : 1.0)
+                    .id("redButton")
+                    
+                    
+                }.frame(width: UIScreen.main.bounds.width * 0.35, height: UIScreen.main.bounds.height * 0.22)
+                
+                
+                HStack (spacing: 48) {
+                    
+                    Button(action: {
+                    
+                    }) {
+                        Image.theme.blueSymbol
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .scaleEffect(animationBlueButton ? 1.2 : 1.0)
+                    .id("blueButton")
+                    
+                    
+                    Button(action: {
+                        
+                    }) {
+                        Image.theme.yellowSymbol
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .scaleEffect(animationYellowButton ? 1.2 : 1.0)
+                    .id("yellowButton")
+                    
+                    
+                }.frame(width: UIScreen.main.bounds.width * 0.35, height: UIScreen.main.bounds.height * 0.22)
+            }.padding(.bottom, 32)
+        }
+        .onAppear{
+        
+            
+            for (index,symbol) in symbols.enumerated() {
+                
+                if symbol.symbolSound == "greenSymbol" {
+                    print("verde")
+                    
+                    let delay = DispatchTimeInterval.milliseconds(Int(3000 + (index * 3000)))
+                    DispatchQueue.main.asyncAfter(deadline: .now() + delay ) {
+                        animationGreenButton = true
+                            withAnimation(
+                                Animation
+                                    .easeInOut(duration: 3.0)
+                            ) {
+                                animationGreenButton = false
+                            }
+                        }
+                } else if symbol.symbolSound == "redSymbol" {
+                    print("vermelho")
+                    
+                    let delay = DispatchTimeInterval.milliseconds(Int(3000 + (index * 3000)))
+                    DispatchQueue.main.asyncAfter(deadline: .now() + delay ) {
+                        animationRedButton = true
+                            withAnimation(
+                                Animation
+                                    .easeInOut(duration: 3.0)
+                            ) {
+                                animationRedButton = false
+                            }
+                        }
+
+                } else if symbol.symbolSound == "blueSymbol" {
+                    print("azul")
+                    
+                    let delay = DispatchTimeInterval.milliseconds(Int(3000 + (index * 3000)))
+                    DispatchQueue.main.asyncAfter(deadline: .now() + delay ) {
+                        animationBlueButton = true
+                            withAnimation(
+                                Animation
+                                    .easeInOut(duration: 3.0)
+                            ) {
+                                animationBlueButton = false
+                            }
+                        }
+
+                } else {
+                    print("amarelo")
+                    
+                    let delay = DispatchTimeInterval.milliseconds(Int(3000 + (index * 3000)))
+                    DispatchQueue.main.asyncAfter(deadline: .now() + delay ) {
+                        animationYellowButton = true
+                            withAnimation(
+                                Animation
+                                    .easeInOut(duration: 3.0)
+                            ) {
+                                animationYellowButton = false
+                            }
+                        }
+
+                }
             }
         }
-        .onReceive(timer) { _ in
-            // Atualiza o valor de currentIndex a cada 3 segundos
-            currentIndex += 1
-            if currentIndex >= symbols.count {
-                currentIndex = 0
-            }
-        }
+
     }
+    
+    func addAnimationGreen(whichIndex: Int) {
+        if animationGreenButton {
+            let delay = DispatchTimeInterval.milliseconds(Int(1500 + (whichIndex * 1500)))
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay ) {
+                    withAnimation(
+                        Animation
+                            .easeInOut(duration: 1.5)
+                    ) {
+                        animationGreenButton = false
+                    }
+                }
+        }
+        }
+    
+    func addAnimationRed(whichIndex: Int) {
+        guard !animationRedButton else { return }
+        let delay = DispatchTimeInterval.milliseconds(Int(1500 + whichIndex * 1500))
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                withAnimation(
+                    Animation
+                        .easeInOut(duration: 1.5)
+                ) {
+                    animationRedButton = false
+                }
+            }
+        }
+    
+    func addAnimationBlue(whichIndex: Int) {
+        guard !animationBlueButton else { return }
+        let delay = DispatchTimeInterval.milliseconds(Int(1500 + whichIndex * 1500))
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                withAnimation(
+                    Animation
+                        .easeInOut(duration: 1.5)
+                ) {
+                    animationBlueButton = false
+                }
+            }
+        }
+    
+    
+    func addAnimationYellow(whichIndex: Int) {
+        guard !animationYellowButton else { return }
+        let delay = DispatchTimeInterval.milliseconds(Int(1500 + whichIndex * 1500))
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                withAnimation(
+                    Animation
+                        .easeInOut(duration: 1.5)
+                ) {
+                    animationYellowButton = false
+                }
+            }
+        }
+    
 }
+
 
 struct TestingScale_Previews: PreviewProvider {
     static var previews: some View {

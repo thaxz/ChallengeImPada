@@ -13,7 +13,7 @@ struct ChallengeImpadaApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView()
+                TestingScale()
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }
