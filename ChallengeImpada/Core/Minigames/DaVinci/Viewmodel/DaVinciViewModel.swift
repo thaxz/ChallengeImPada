@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class DaVinciViewModel: ObservableObject {
+    
     @Published var firstColor = UIColor(.black)
     @Published var secondColor = UIColor(.black)
     @Published var mergedColor = UIColor(.black)

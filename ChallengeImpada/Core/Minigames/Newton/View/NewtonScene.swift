@@ -80,7 +80,7 @@ class NewtonScene: SKScene, ObservableObject {
         // Criando o node
         floor = SKSpriteNode(imageNamed: "floor")
         // Arrumando posição
-        floor.position = CGPoint(x: floor.size.width/2, y: size.height - gameArea - floor.size.height/2)
+        floor.position = CGPoint(x: floor.size.width, y: size.height - gameArea - floor.size.height/2)
         floor.zPosition = 2
         floor.size = CGSize(width: self.size.width * 2, height: 400)
         // Adicionando
@@ -113,42 +113,15 @@ class NewtonScene: SKScene, ObservableObject {
         // criando a duração
         let duration = Double(floor.size.width/2)/velocity
         // criando a ação
-        let moveFloorAction = SKAction.moveBy(x: -floor.size.width/4, y: 0, duration: duration)
+        let moveFloorAction = SKAction.moveBy(x: -floor.size.width/2, y: 0, duration: duration)
         // o de cima move pra esquerda e o de baixo para a direita. vou criar um loop dos dois
-        let resetXAction = SKAction.moveBy(x: floor.size.width/4, y: 0, duration: 0)
+        let resetXAction = SKAction.moveBy(x: floor.size.width/2, y: 0, duration: 0)
         // criando ação de sequência
         let sequenceAction = SKAction.sequence([moveFloorAction, resetXAction])
         // repetindo a sequencia forever
         let repeatAction = SKAction.repeatForever(sequenceAction)
         // colocando no node
         floor.run(repeatAction)
-    }
-    
-    func MoveBackgrounds(image: String, y: CGFloat, z: CGFloat, duration: Double, needsPhysics: Bool, size: CGSize){
-        for i in 0...1{
-            let node = SKSpriteNode(imageNamed: image)
-            node.anchorPoint = .zero
-            node.position = CGPoint(x: size.width * CGFloat(i), y: y)
-            node.size = size
-            node.zPosition = z
-            
-            if needsPhysics {
-                node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
-                node.physicsBody?.isDynamic = false
-                node.physicsBody?.contactTestBitMask = 1
-                node.name = "player1"
-            }
-            
-            let move = SKAction.moveBy(x: -node.size.width, y: 0, duration: duration)
-            let wrap = SKAction.moveBy(x: node.size.width, y: 0, duration: 0)
-            let sequence = SKAction.sequence([move, wrap])
-            let immer = SKAction.repeatForever(sequence)
-            
-            node.run(immer)
-            
-            addChild(node)
-            
-        }
     }
     
     
@@ -191,7 +164,6 @@ class NewtonScene: SKScene, ObservableObject {
     func spawnEnemies(){
         // Posição aleatória
         let initialPosition = CGFloat(arc4random_uniform(132) + 74)
-        // Qual inimigo vai spawnar
         let enemyNumber = Int(arc4random_uniform(4) + 1)
         // a distância que vai ter entre o de cima e o de baixo
         let enemiesDistance = self.player.size.height * 2.5
