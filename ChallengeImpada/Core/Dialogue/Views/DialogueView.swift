@@ -14,38 +14,50 @@ struct DialogueView: View {
     let scene: DialogueScene
     
     var body: some View {
-            ZStack {
-                Color.theme.primary
-                    .ignoresSafeArea()
-                VStack {
-                    HStack{
-                        Spacer()
-                            Button {
-                            } label: { SkipButton() }
-                    }
+        ZStack {
+            Color.theme.primary
+                .ignoresSafeArea()
+            VStack {
+                HStack{
                     Spacer()
+                    Button(action: {
+                        self.changeView.toggle()
+                    }) {
+                        SkipButton()
+                    }
+                }
+                Spacer()
+                
+                
+                
+                HStack(alignment: .bottom, spacing: 16){
+                    
+                    CharacterPortrait(character: scene.dialogues[index].data.character)
                     
                     NavigationLink(destination: scene.whichViewNavigateTo, isActive: $changeView) {
-                        
-                        HStack(alignment: .bottom, spacing: 16){
-                            
-                            CharacterPortrait(character: scene.dialogues[index].data.character)
-                            DialogueContainer(text: scene.dialogues[index].data.text)
-                                .onTapGesture {
-                                    print(index)
-                                    if index < scene.maxIndex {
-                                        index += 1
-                                    } else {
-                                        self.changeView.toggle()
-                                    }
-                                    
-                                    
+                        DialogueContainer(text: scene.dialogues[index].data.text)
+                            .onTapGesture {
+                                print(index)
+                                if index < scene.maxIndex {
+                                    index += 1
+                                } else if index == scene.maxIndex{
+                                    self.changeView.toggle()
                                 }
-                        }
+                                
+                                
+                            }
                     }
-                    
-                    
                 }
+                
+                
             }
+        }
+    }
+}
+
+
+struct DialogueView_Previews: PreviewProvider {
+    static var previews: some View {
+        DialogueView(scene: Data().turingOnboardingScene)
     }
 }
