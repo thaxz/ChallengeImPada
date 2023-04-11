@@ -7,6 +7,7 @@
 
 import SpriteKit
 import GameplayKit
+import SwiftUI
 
 class NewtonScene: SKScene, ObservableObject {
     
@@ -20,14 +21,16 @@ class NewtonScene: SKScene, ObservableObject {
     
     var velocity: Double = 100
     var gameArea: CGFloat = 900.0
-    var score: Int = 0
     var flyForce: CGFloat = 28.0
     
     var timer: Timer!
     
-    var gameFinished = false
-    var gameStarted = false
-    var restart = false
+    @Published var isGameOver = false
+    @Published var score = 0
+    
+    @Published var gameFinished = false
+    @Published var gameStarted = false
+    @Published var restart = false
     
     var playerCategory: UInt32 = 1
     var enemyCategory: UInt32 = 2
