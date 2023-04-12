@@ -15,7 +15,8 @@ struct DialogueView: View {
     
     var body: some View {
         ZStack {
-            Color.theme.primary
+            Image(scene.image)
+                .resizable()
                 .ignoresSafeArea()
             VStack {
                 HStack{
