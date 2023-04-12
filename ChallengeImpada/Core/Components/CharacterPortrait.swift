@@ -39,7 +39,7 @@ struct CharacterPortrait: View {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(Color.white)
                 Text(name)
-                    .font(.system(size: 26, weight: .medium))
+                    .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.black)
                     .padding(4)
                 

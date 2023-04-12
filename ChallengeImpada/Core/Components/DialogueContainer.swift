@@ -17,7 +17,7 @@ struct DialogueContainer: View {
                 .foregroundColor(.white)
             HStack {
                 Text(text)
-                    .font(.system(size: 22, weight: .medium))
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.black)
                     .padding(24)
             }

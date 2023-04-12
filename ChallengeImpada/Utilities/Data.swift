@@ -137,7 +137,7 @@ struct Data {
         ],
         maxIndex: 20,
         whichViewNavigateTo: AnyView(TuringGameView()),
-        image: "turingBg"
+        image: "turingBefore"
     )
     
     let turingConclusionScene: DialogueScene = DialogueScene(
