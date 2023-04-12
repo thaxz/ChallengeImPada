@@ -17,11 +17,12 @@ struct DialogueContainer: View {
                 .foregroundColor(.gray)
             HStack {
                 Text(text)
-                    .font(.system(size: 22, weight: .medium))
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.white)
                     .padding(24)
             }
             .frame(height: 180, alignment: .topLeading)
+            .multilineTextAlignment(.leading)
         }
         .overlay(
             Image(systemName: "triangle.fill")

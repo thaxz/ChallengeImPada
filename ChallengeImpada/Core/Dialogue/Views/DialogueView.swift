@@ -15,7 +15,8 @@ struct DialogueView: View {
     
     var body: some View {
         ZStack {
-            Color.theme.primary
+            Image(scene.image)
+                .resizable()
                 .ignoresSafeArea()
             VStack {
                 HStack{
@@ -27,9 +28,6 @@ struct DialogueView: View {
                     }
                 }
                 Spacer()
-                
-                
-                
                 HStack(alignment: .bottom, spacing: 16){
                     
                     CharacterPortrait(character: scene.dialogues[index].data.character)
@@ -43,14 +41,11 @@ struct DialogueView: View {
                                 } else if index == scene.maxIndex{
                                     self.changeView.toggle()
                                 }
-                                
-                                
                             }
                     }
                 }
-                
-                
             }
+            .padding(32)
         }
     }
 }

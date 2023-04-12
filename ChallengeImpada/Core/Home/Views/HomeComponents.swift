@@ -39,7 +39,7 @@ extension HomeView {
                         .font(.system(size: 50, weight: .bold))
                         .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.height * 0.09)
                         .overlay(
-                            RoundedRectangle(cornerRadius: 6)
+                            RoundedRectangle(cornerRadius: 32)
                                 .stroke(Color.theme.accent, lineWidth: 5)
                         )
                 }

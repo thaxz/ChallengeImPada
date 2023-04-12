@@ -13,4 +13,5 @@ struct DialogueScene {
     let dialogues: [Dialogue]
     let maxIndex: Int
     let whichViewNavigateTo: AnyView
+    let image: String
 }
