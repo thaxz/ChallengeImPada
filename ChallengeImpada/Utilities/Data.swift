@@ -131,7 +131,7 @@ struct Data {
             Dialogue(data: (character: CharactersData().turing, text: "Confio que vocês serão capazes de decifrar a mensagem e salvar o mundo!")),
         ],
         maxIndex: 20,
-        whichViewNavigateTo: AnyView(TestingScale())
+        whichViewNavigateTo: AnyView(TuringGameView())
     )
     
     let turingConclusionScene: DialogueScene = DialogueScene(

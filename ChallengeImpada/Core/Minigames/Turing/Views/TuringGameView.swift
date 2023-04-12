@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-struct TestingScale: View {
+struct TuringGameView: View {
     
     @StateObject var symbolsViewModel =  SymbolViewModel()
     
@@ -16,13 +16,23 @@ struct TestingScale: View {
     
     @State var symbols: [Symbol] = []
     
+    @State var confetti: Bool = false
+    @State var finishConfetti: Bool = false
+    
     
     var body: some View {
         //        let symbols = sequenceSymbols
         
         var pressedSymbols: [Symbol] = []
         
+        
+        
         ZStack (alignment: .bottom) {
+            
+            NavigationLink(destination: DialogueView(scene: Data().turingConclusionScene), isActive: $finishConfetti, label: {
+                EmptyView()
+            })
+            
             RadialBackground()
             
             Image.theme.telephone
@@ -105,6 +115,10 @@ struct TestingScale: View {
                                 print(symbols)
                                 print(pressedSymbols)
                                 print(result)
+                                if result {
+                                    doConfetti()
+                                }
+                                
                             }
                         }) {
                             Image.theme.greenSymbol
@@ -123,6 +137,9 @@ struct TestingScale: View {
                                 print(symbols)
                                 print(pressedSymbols)
                                 print(result)
+                                if result {
+                                    doConfetti()
+                                }
                             }
                         }) {
                             Image.theme.redSymbol
@@ -146,6 +163,9 @@ struct TestingScale: View {
                                 print(symbols)
                                 print(pressedSymbols)
                                 print(result)
+                                if result {
+                                    doConfetti()
+                                }
                             }
                         }) {
                             Image.theme.blueSymbol
@@ -164,6 +184,9 @@ struct TestingScale: View {
                                 print(symbols)
                                 print(pressedSymbols)
                                 print(result)
+                                if result {
+                                    doConfetti()
+                                }
                             }
                         }) {
                             Image.theme.yellowSymbol
@@ -181,6 +204,11 @@ struct TestingScale: View {
                         print(symbols)
                     }
             }
+            
+            EmitterView()
+                .scaleEffect(confetti ? 1 : 0, anchor: .top)
+                .opacity(confetti && !finishConfetti ? 1 : 0)
+                .ignoresSafeArea()
             
         }
         .onAppear{
@@ -281,7 +309,22 @@ struct TestingScale: View {
             
             
         }
+        
+        
     }
+    
+    func doConfetti(){
+                withAnimation(.spring()) {
+                    confetti = true
+                }
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    withAnimation(.easeInOut(duration: 1)){
+                        finishConfetti = true
+                    }
+                }
+
+            }
     
     
 }
