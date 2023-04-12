@@ -16,11 +16,7 @@ extension View {
 
 struct ClearBackgroundView: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
-        let view = UIView()
-        DispatchQueue.main.async {
-            view.superview?.superview?.backgroundColor = .clear
-        }
-        return view
+        return SuperviewRecolourView()
     }
     func updateUIView(_ uiView: UIViewType, context: Context) {
     }
@@ -31,6 +27,17 @@ struct ClearBackgroundViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(ClearBackgroundView())
+    }
+}
+
+class SuperviewRecolourView: UIView {
+    override func layoutSubviews() {
+        guard let parentView = superview?.superview
+        else {
+            print("ERROR: Failed to get parent view to make it clear")
+            return
+        }
+        parentView.backgroundColor = .clear
     }
 }
 

@@ -2,21 +2,30 @@
 //  NewtonView.swift
 //  ChallengeImpada
 //
-//  Created by thaxz on 28/03/23.
+//  Created by thaxz on 04/04/23.
 //
 
 import SwiftUI
+import SpriteKit
 
 struct NewtonView: View {
+    
+    @StateObject private var game: NewtonScene
+    
+    init(){
+        _game = StateObject(wrappedValue: NewtonScene())
+    }
+    
     var body: some View {
         ZStack {
-            Color.theme.primary
-                .ignoresSafeArea()
-            VStack {
-                Text("Oi sou o Newton")
-                    .foregroundColor(.white)
+            SpriteView(scene: NewtonScene())
+                        .ignoresSafeArea()
+            if game.isGameOver {
+                Color.pink
             }
+
         }
+        
     }
 }
 

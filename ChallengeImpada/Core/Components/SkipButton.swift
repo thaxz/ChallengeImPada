@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SkipButton: View {
-    
+    let destination: AnyView
     var body: some View {
-        NavigationLink (destination: LevelSelectionView()) {
+        NavigationLink (destination: destination) {
             ZStack{
                 Rectangle()
                     .border(.white, width: 5)
@@ -28,7 +28,7 @@ struct SkipButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black
-            SkipButton()
+            //SkipButton(destination: AnyView())
         }
     }
 }

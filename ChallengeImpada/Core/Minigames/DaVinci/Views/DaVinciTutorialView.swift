@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DaVinciTutorialView: View {
     var body: some View {
-        Text("Tutorial aqui galera")
+        Image("TutorialView")
+            .background(.clear)
     }
 }
 
