@@ -136,7 +136,7 @@ struct Data {
             Dialogue(data: (character: CharactersData().turing, text: "Confio que vocês serão capazes de decifrar a mensagem e salvar o mundo!")),
         ],
         maxIndex: 20,
-        whichViewNavigateTo: AnyView(TuringView()),
+        whichViewNavigateTo: AnyView(TuringGameView()),
         image: "turingBg"
     )
     

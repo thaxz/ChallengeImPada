@@ -21,6 +21,10 @@
 		A4478BF929D4C7A400229AA6 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478BF829D4C7A400229AA6 /* Image.swift */; };
 		A4478C1529D61AC400229AA6 /* MuseuViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4478C1429D61AC400229AA6 /* MuseuViewComponents.swift */; };
 		A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4946EE129D37CE70045F4BF /* HomeComponents.swift */; };
+		A4CDA3A529E5D448006C32FE /* RadialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3A429E5D448006C32FE /* RadialBackground.swift */; };
+		A4CDA3A929E5E43F006C32FE /* TuringGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3A829E5E43F006C32FE /* TuringGameView.swift */; };
+		A4CDA3AB29E740B8006C32FE /* EndGameTuringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3AA29E740B8006C32FE /* EndGameTuringView.swift */; };
+		A4CDA3AD29E744E9006C32FE /* Particles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDA3AC29E744E9006C32FE /* Particles.swift */; };
 		CA80D6E429D4C30400A1DC2E /* CharacterDetailsComponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80D6E329D4C30400A1DC2E /* CharacterDetailsComponentsView.swift */; };
 		CADFFB0229D3703B000923FA /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFFB0129D3703B000923FA /* CharacterDetailsView.swift */; };
 		CADFFB0429D37E20000923FA /* spongecharacter.scn in Resources */ = {isa = PBXBuildFile; fileRef = CADFFB0329D37E20000923FA /* spongecharacter.scn */; };
@@ -47,7 +51,6 @@
 		E974C2B929D36A0500F2D592 /* DaVinciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2B829D36A0500F2D592 /* DaVinciView.swift */; };
 		E974C2BB29D36A1000F2D592 /* DaVinciViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2BA29D36A1000F2D592 /* DaVinciViewModel.swift */; };
 		E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2BC29D36A1F00F2D592 /* TuringViewModel.swift */; };
-		E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2BE29D36A2800F2D592 /* TuringView.swift */; };
 		E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C029D36A3500F2D592 /* NewtonViewModel.swift */; };
 		E974C2C329D36A4200F2D592 /* NewtonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C229D36A4200F2D592 /* NewtonScene.swift */; };
 		E974C2C529D36A5200F2D592 /* AnyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2C429D36A5200F2D592 /* AnyComponent.swift */; };
@@ -78,6 +81,10 @@
 		A4478BF829D4C7A400229AA6 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4478C1429D61AC400229AA6 /* MuseuViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseuViewComponents.swift; sourceTree = "<group>"; };
 		A4946EE129D37CE70045F4BF /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
+		A4CDA3A429E5D448006C32FE /* RadialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialBackground.swift; sourceTree = "<group>"; };
+		A4CDA3A829E5E43F006C32FE /* TuringGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringGameView.swift; sourceTree = "<group>"; };
+		A4CDA3AA29E740B8006C32FE /* EndGameTuringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameTuringView.swift; sourceTree = "<group>"; };
+		A4CDA3AC29E744E9006C32FE /* Particles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particles.swift; sourceTree = "<group>"; };
 		CA80D6E329D4C30400A1DC2E /* CharacterDetailsComponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsComponentsView.swift; sourceTree = "<group>"; };
 		CADFFB0129D3703B000923FA /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
 		CADFFB0329D37E20000923FA /* spongecharacter.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = spongecharacter.scn; sourceTree = "<group>"; };
@@ -105,7 +112,6 @@
 		E974C2B829D36A0500F2D592 /* DaVinciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaVinciView.swift; sourceTree = "<group>"; };
 		E974C2BA29D36A1000F2D592 /* DaVinciViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaVinciViewModel.swift; sourceTree = "<group>"; };
 		E974C2BC29D36A1F00F2D592 /* TuringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringViewModel.swift; sourceTree = "<group>"; };
-		E974C2BE29D36A2800F2D592 /* TuringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuringView.swift; sourceTree = "<group>"; };
 		E974C2C029D36A3500F2D592 /* NewtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonViewModel.swift; sourceTree = "<group>"; };
 		E974C2C229D36A4200F2D592 /* NewtonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewtonScene.swift; sourceTree = "<group>"; };
 		E974C2C429D36A5200F2D592 /* AnyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyComponent.swift; sourceTree = "<group>"; };
@@ -387,7 +393,8 @@
 		E91A582029C8F8080055EDB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E974C2BE29D36A2800F2D592 /* TuringView.swift */,
+				A4CDA3A829E5E43F006C32FE /* TuringGameView.swift */,
+				A4CDA3AA29E740B8006C32FE /* EndGameTuringView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,6 +443,7 @@
 				E974C2C829D36A6F00F2D592 /* AnyUtilities.swift */,
 				E974C2D929D37F0300F2D592 /* Data.swift */,
 				8F14EBA329E4924E008BC3EB /* CharactersData.swift */,
+				A4CDA3AC29E744E9006C32FE /* Particles.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -447,6 +455,7 @@
 				8F3EB1EB29D4D1110045EEE7 /* UIColor.swift */,
 				A4478BF829D4C7A400229AA6 /* Image.swift */,
 				8F0E47BB29DCB35900E73DBD /* View.swift */,
+				A4CDA3A429E5D448006C32FE /* RadialBackground.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,6 +599,7 @@
 				E974C2C929D36A6F00F2D592 /* AnyUtilities.swift in Sources */,
 				8F3EB1EC29D4D1110045EEE7 /* UIColor.swift in Sources */,
 				E974C2B329D369DA00F2D592 /* CreditsViewModel.swift in Sources */,
+				A4CDA3A929E5E43F006C32FE /* TuringGameView.swift in Sources */,
 				8F0E47BE29DCB41400E73DBD /* DaVinciTutorialView.swift in Sources */,
 				E974C2DA29D37F0300F2D592 /* Data.swift in Sources */,
 				E974C2B529D369EB00F2D592 /* LevelSelectionView.swift in Sources */,
@@ -597,6 +607,8 @@
 				E94C35B129E5DD9E007AABB4 /* NewtonGameOver.swift in Sources */,
 				E974C2B729D369F600F2D592 /* LevelSelectionViewModel.swift in Sources */,
 				E974C2B129D369D000F2D592 /* CreditsView.swift in Sources */,
+				A4CDA3AB29E740B8006C32FE /* EndGameTuringView.swift in Sources */,
+				A4CDA3AD29E744E9006C32FE /* Particles.swift in Sources */,
 				E974C2D229D36DA700F2D592 /* DialogueViewModel.swift in Sources */,
 				A4478BF729D4C76900229AA6 /* CharacterViewModel.swift in Sources */,
 				8F3EB1E829D4BEB90045EEE7 /* MuseuViewModel.swift in Sources */,
@@ -613,6 +625,7 @@
 				E974C2C129D36A3500F2D592 /* NewtonViewModel.swift in Sources */,
 				8F0E47BC29DCB35900E73DBD /* View.swift in Sources */,
 				CA80D6E429D4C30400A1DC2E /* CharacterDetailsComponentsView.swift in Sources */,
+				A4CDA3A529E5D448006C32FE /* RadialBackground.swift in Sources */,
 				E974C2BD29D36A1F00F2D592 /* TuringViewModel.swift in Sources */,
 				A4946EE229D37CE70045F4BF /* HomeComponents.swift in Sources */,
 				E947446729D4B86000A3916A /* DialogueScene.swift in Sources */,
@@ -623,7 +636,6 @@
 				E974C2D829D372C300F2D592 /* CharacterPortrait.swift in Sources */,
 				8F3EB1EA29D4BECA0045EEE7 /* MuseuView.swift in Sources */,
 				8F0E47B629DCA5CB00E73DBD /* SecondStageView.swift in Sources */,
-				E974C2BF29D36A2800F2D592 /* TuringView.swift in Sources */,
 				E974C2D029D36D7600F2D592 /* DialogueView.swift in Sources */,
 				A4478BF929D4C7A400229AA6 /* Image.swift in Sources */,
 				E974C2C729D36A5B00F2D592 /* Dialogues.swift in Sources */,

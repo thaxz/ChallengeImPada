@@ -3,6 +3,7 @@ import SwiftUI
 class SymbolViewModel: ObservableObject {
     
     @Published var symbols: [Symbol] = []
+    @Published var animatingSequence: Bool = true
     
     init() {
         addSymbols()
@@ -13,14 +14,14 @@ class SymbolViewModel: ObservableObject {
     }
     
     func sortPhrase(array: [String]) -> String {
-        guard let randomPhrase = array.randomElement() else { return "Plaholder" }
+        guard let randomPhrase = array.randomElement() else { return "Placeholder" }
         return randomPhrase
     }
     
     func sortSymbols() -> [Symbol] {
         var newSymbols = [Symbol]()
         for index in 0..<4 {
-            guard let sortedSymbol = symbols.randomElement() else { return [Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound")] }
+            guard let sortedSymbol = symbols.randomElement() else { return [Symbol(symbolImage: Image.theme.greenSymbol, symbolSound: "greenSymbol")] }
             newSymbols.append(sortedSymbol)
         }
         return newSymbols
@@ -39,10 +40,10 @@ class SymbolViewModel: ObservableObject {
 }
 
 let symbolsData = [
-    Symbol(symbolImage: Image.theme.starButton, symbolSound: "starSound"),
-    Symbol(symbolImage: Image.theme.circleButton, symbolSound: "circleSound"),
-    Symbol(symbolImage: Image.theme.squareButton, symbolSound: "squareSound"),
-    Symbol(symbolImage: Image.theme.triangleButton, symbolSound: "triangleSound")
+    Symbol(symbolImage: Image.theme.greenSymbol, symbolSound: "greenSymbol"),
+    Symbol(symbolImage: Image.theme.redSymbol, symbolSound: "redSymbol"),
+    Symbol(symbolImage: Image.theme.yellowSymbol, symbolSound: "yellowSymbol"),
+    Symbol(symbolImage: Image.theme.blueSymbol, symbolSound: "blueSymbol")
 ]
 
 let phrases: [String] = []
