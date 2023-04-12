@@ -14,14 +14,15 @@ struct DialogueContainer: View {
     var body: some View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.gray)
+                .foregroundColor(.white)
             HStack {
                 Text(text)
                     .font(.system(size: 22, weight: .medium))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding(24)
             }
             .frame(height: 180, alignment: .topLeading)
+            .multilineTextAlignment(.leading)
         }
         .overlay(
             Image(systemName: "triangle.fill")
