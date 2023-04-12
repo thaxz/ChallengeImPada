@@ -12,9 +12,11 @@ struct HomeView: View {
         
             ZStack {
                 
-                // background layer
-                Color.theme.primary
+                Image("backgroundMenu")
                     .ignoresSafeArea()
+                // background layer
+//                Color.theme.primary
+//                    .ignoresSafeArea()
                 
                 // content layer
                 homeBody

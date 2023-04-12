@@ -60,6 +60,7 @@
 		E974C2D629D3729600F2D592 /* DialogueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2D529D3729600F2D592 /* DialogueContainer.swift */; };
 		E974C2D829D372C300F2D592 /* CharacterPortrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2D729D372C300F2D592 /* CharacterPortrait.swift */; };
 		E974C2DA29D37F0300F2D592 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E974C2D929D37F0300F2D592 /* Data.swift */; };
+		E9785D4B29E7392100338830 /* LevelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9785D4A29E7392100338830 /* LevelContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		E974C2D529D3729600F2D592 /* DialogueContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueContainer.swift; sourceTree = "<group>"; };
 		E974C2D729D372C300F2D592 /* CharacterPortrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPortrait.swift; sourceTree = "<group>"; };
 		E974C2D929D37F0300F2D592 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		E9785D4A29E7392100338830 /* LevelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				E974C2B429D369EB00F2D592 /* LevelSelectionView.swift */,
+				E9785D4A29E7392100338830 /* LevelContainer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				E974C2AF29D369C000F2D592 /* HomeViewModel.swift in Sources */,
 				8F3EB1EE29D4D5C00045EEE7 /* DaVinciComponents.swift in Sources */,
 				A429BB9629DCAFD0007E3BA1 /* Symbol.swift in Sources */,
+				E9785D4B29E7392100338830 /* LevelContainer.swift in Sources */,
 				E974C2D629D3729600F2D592 /* DialogueContainer.swift in Sources */,
 				E95AAB1229DCB0C600899952 /* NewtonScene2.swift in Sources */,
 				E974C2C529D36A5200F2D592 /* AnyComponent.swift in Sources */,
