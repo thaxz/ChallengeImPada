@@ -20,10 +20,12 @@ class DaVinciViewModel: ObservableObject {
     @Published var secondStage = false
     @Published var switchStagePopUp = false
     @Published var endGamePopUp = false
-    @Published var gameEnded = false
+    @Published var backToSelection = false
     
     @Published var colorCounter2 = 0
     @Published var colorCounter3 = 0
+    
+    @Published var bgImage = ImageBG().neutral3
     
     var secondColors: [(cor: UIColor, appeared: Bool)] = [
         (UIColor(.purple), false),
@@ -83,6 +85,8 @@ class DaVinciViewModel: ObservableObject {
         else {
             mergedColor = UIColor.blend(color1: firstColor, intensity1: 0.5, color2: secondColor, intensity2: 0.5)
         }
+        compareColors()
+        removeColors()
     }
     
     func randSecondColors(randomIndex: Int) {
@@ -120,32 +124,25 @@ class DaVinciViewModel: ObservableObject {
         let hashMerged: Int = mergedColor.hash
         let hashRandom: Int = randomColor.hash
         
-        
-        if (firstColor.hash != 65536) && (secondColor.hash != 65536) {
-            if hashMerged == hashRandom {
-                if !secondStage {
-                    colorCounter2 += 1
-                    if colorCounter2 == 3 {
-                        withAnimation {
-                            secondStage.toggle()
-                        }
-                        switchStagePopUp.toggle()
+        if hashMerged == hashRandom {
+            if !secondStage {
+                colorCounter2 += 1
+                if colorCounter2 == 3 {
+                    withAnimation {
+                        secondStage.toggle()
                     }
-                } else {
-                    colorCounter3 += 1
-                    if colorCounter3 == 6 {
-                        endGamePopUp.toggle()
-                        gameEnded.toggle()
-                        print(gameEnded)
-                    }
+                    switchStagePopUp.toggle()
                 }
-                makeRandomColor()
-                print("Sucesso")
             } else {
-                print("Fracasso")
+                colorCounter3 += 1
+                if colorCounter3 == 6 {
+                    endGamePopUp.toggle()
+                }
             }
+            makeRandomColor()
+            print("Sucesso")
         } else {
-            print("Selecione uma cor")
+            print("Fracasso")
         }
     }
     
@@ -155,15 +152,95 @@ class DaVinciViewModel: ObservableObject {
         } else {
             secondColor = pressedButtomColor
         }
+        if secondColor.hash != 65536 {
+            merge()
+            changeBG(hash: mergedColor.hash)
+        } else {
+            changeBG(hash: firstColor.hash)
+        }
     }
     
-    func removeFirstColor() {
+    func removeColors() {
         firstColor = UIColor(.black)
-    }
-    
-    func removeSecondColor() {
         secondColor = UIColor(.black)
     }
     
+    func changeBG(hash: Int) {
+        switch hash {
+        case UIColor(.red).hash, 146768846:
+            if secondStage {
+                bgImage = ImageBG().red
+            }
+            else {
+                bgImage = ImageBG().red3
+            }
+        case UIColor(.blue).hash, 6216317:
+            if secondStage {
+                bgImage = ImageBG().blue
+            }
+            else {
+                bgImage = ImageBG().blue3
+            }
+        case UIColor(.yellow).hash, 152906263:
+            if secondStage {
+                bgImage = ImageBG().yellow
+            }
+            else {
+                bgImage = ImageBG().yellow3
+            }
+        case UIColor(.green).hash, 38366760, 105553176698896:
+            if secondStage {
+                bgImage = ImageBG().green
+            }
+            else {
+                bgImage = ImageBG().green3
+            }
+        case UIColor(.purple).hash, 103178819, 105553176698848:
+            if secondStage {
+                bgImage = ImageBG().purple
+            }
+            else {
+                bgImage = ImageBG().purple3
+            }
+        case UIColor(.orange).hash, 150517448, 105553176698944:
+            if secondStage {
+                bgImage = ImageBG().orange
+            }
+            else {
+                bgImage = ImageBG().orange3
+            }
+        case 124973748:
+            bgImage = ImageBG().redPurple
+        case 148643147:
+            bgImage = ImageBG().redOrange
+        case 22291623:
+            bgImage = ImageBG().blueGreen
+        case 54696476:
+            bgImage = ImageBG().bluePurple
+        case 95637688:
+            bgImage = ImageBG().yellowGreen
+        case 151711940:
+            bgImage = ImageBG().yellowOrange
+        case 92568895:
+            bgImage = ImageBG().redGreen
+        case 78365862:
+            bgImage = ImageBG().blueGreen
+        case 128042541:
+            bgImage = ImageBG().yellowPurple
+        case 70771782:
+            bgImage = ImageBG().greenPurple
+        case 94443196:
+            bgImage = ImageBG().greenOrange
+        case 126848049:
+            bgImage = ImageBG().orangePurple
+        default:
+            if secondStage {
+                bgImage = ImageBG().neutral
+            }
+            else {
+                bgImage = ImageBG().neutral3
+            }
+        }
+    }
 }
 
