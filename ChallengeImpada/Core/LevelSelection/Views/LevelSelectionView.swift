@@ -20,7 +20,7 @@ struct LevelSelectionView: View {
                         Rectangle()
                             .border(.white, width: 5)
                             .foregroundColor(.clear)
-                        Text("Da Vinci ou da mais?")
+                        Text("Da Vinci")
                             .foregroundColor(.white)
                             .font(.system(size: 28, weight: .bold))
                     }
@@ -31,7 +31,7 @@ struct LevelSelectionView: View {
                         Rectangle()
                             .border(.white, width: 5)
                             .foregroundColor(.clear)
-                        Text("Olha Maçuein")
+                        Text("Newton")
                             .foregroundColor(.white)
                             .font(.system(size: 28, weight: .bold))
                     }
@@ -42,7 +42,7 @@ struct LevelSelectionView: View {
                         Rectangle()
                             .border(.white, width: 5)
                             .foregroundColor(.clear)
-                        Text("LGBTuring")
+                        Text("Turing")
                             .foregroundColor(.white)
                             .font(.system(size: 28, weight: .bold))
                     }
