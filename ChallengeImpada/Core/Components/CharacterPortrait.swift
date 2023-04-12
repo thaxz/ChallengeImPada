@@ -37,10 +37,10 @@ struct CharacterPortrait: View {
             Image(image)
             ZStack(alignment: .center){
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(Color.theme.secondary)
+                    .foregroundColor(Color.white)
                 Text(name)
                     .font(.system(size: 26, weight: .medium))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding(4)
                 
             }

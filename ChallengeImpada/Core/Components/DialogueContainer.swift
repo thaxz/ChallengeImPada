@@ -29,7 +29,7 @@ struct DialogueContainer: View {
                 .resizable()
                 .frame(width: 30, height: 30)
                 .rotationEffect(Angle(degrees: 90))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .padding(.trailing)
             ,alignment: .trailing
         )
