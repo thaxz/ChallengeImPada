@@ -28,9 +28,6 @@ struct DialogueView: View {
                     }
                 }
                 Spacer()
-                
-                
-                
                 HStack(alignment: .bottom, spacing: 16){
                     
                     CharacterPortrait(character: scene.dialogues[index].data.character)
@@ -45,13 +42,13 @@ struct DialogueView: View {
                                     self.changeView.toggle()
                                 }
                                 
-                                
                             }
                     }
                 }
                 
                 
             }
+            .padding(32)
         }
     }
 }
