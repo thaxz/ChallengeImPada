@@ -10,43 +10,26 @@ import SwiftUI
 struct LevelSelectionView: View {
     var body: some View {
         ZStack {
-            Color.theme.primary
+            Image("gradient")
+                .resizable()
                 .ignoresSafeArea()
-            
-            VStack(spacing: 16.0) {
+            HStack(spacing: 40) {
                 
                 NavigationLink (destination: DialogueView(scene: Data().daVinciOnboardingScene)) {
-                    ZStack{
-                        Rectangle()
-                            .border(.white, width: 5)
-                            .foregroundColor(.clear)
-                        Text("Da Vinci ou da mais?")
-                            .foregroundColor(.white)
-                            .font(.system(size: 28, weight: .bold))
-                    }
-                    .frame(width: 360, height: 120)
+                   
+                       LevelContainer(image: "davinciLevel", text: "Da Vinci")
+                    
                 }
                 NavigationLink (destination: DialogueView(scene: Data().newtonOnboardingScene)) {
-                    ZStack{
-                        Rectangle()
-                            .border(.white, width: 5)
-                            .foregroundColor(.clear)
-                        Text("Olha Maçuein")
-                            .foregroundColor(.white)
-                            .font(.system(size: 28, weight: .bold))
-                    }
-                    .frame(width: 360, height: 120)
+                    
+                        LevelContainer(image: "newtonLevel", text: "Isaac Newton")
+                    
+                    
                 }
                 NavigationLink (destination: DialogueView(scene: Data().turingOnboardingScene)) {
-                    ZStack{
-                        Rectangle()
-                            .border(.white, width: 5)
-                            .foregroundColor(.clear)
-                        Text("LGBTuring")
-                            .foregroundColor(.white)
-                            .font(.system(size: 28, weight: .bold))
-                    }
-                    .frame(width: 360, height: 120)
+                    
+                        LevelContainer(image: "turingLevel", text: "Alan Turing")
+                    
                 }
             }
         }

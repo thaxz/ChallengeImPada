@@ -20,8 +20,9 @@ class NewtonScene: SKScene, ObservableObject {
     let gameOverSound = SKAction.playSoundFileNamed("hit.mp3", waitForCompletion: false)
     
     var velocity: Double = 100
-    var gameArea: CGFloat = 900.0
-    var flyForce: CGFloat = 500.0
+    var gameArea: CGFloat = 800
+    //800
+    var flyForce: CGFloat = 800.0
     //28
     
     var timer: Timer!
@@ -67,7 +68,7 @@ class NewtonScene: SKScene, ObservableObject {
     // Adicionando background
     func addBackground(){
         // transformando a imagem em um node
-        let background = SKSpriteNode(imageNamed: "background")
+        let background = SKSpriteNode(imageNamed: "newtonBg")
         // Arrumando a posição
         // Como a imagem surge no canto, passando pro centro
         background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
@@ -81,11 +82,11 @@ class NewtonScene: SKScene, ObservableObject {
     // Adicionando o piso
     func addFloor(){
         // Criando o node
-        floor = SKSpriteNode(imageNamed: "floor")
+        floor = SKSpriteNode(imageNamed: "newtonGround")
         // Arrumando posição
         floor.position = CGPoint(x: floor.size.width, y: size.height - gameArea - floor.size.height/2)
         floor.zPosition = 2
-        floor.size = CGSize(width: self.size.width * 2, height: 400)
+        floor.size = CGSize(width: self.size.width * 2, height: 400)//400
         // Adicionando
         addChild(floor)
         
@@ -130,15 +131,15 @@ class NewtonScene: SKScene, ObservableObject {
     
     // Adicionando dragão
     func addPlayer(){
-        player = SKSpriteNode(imageNamed: "Pre-comp100")
+        player = SKSpriteNode(imageNamed: "foguetenovo0")
         player.zPosition = 4
         player.position = CGPoint(x: 60, y: size.height - gameArea/2)
         player.setScale(0.25)
         // add texturas
         var playerTextures = [SKTexture]()
         // Pegando meus sprites
-        for i in 100...147 {
-            playerTextures.append(SKTexture(imageNamed: "Pre-comp\(i)"))
+        for i in 00...47 {
+            playerTextures.append(SKTexture(imageNamed: "foguetenovo\(i)"))
         }
         // criando animação
         let animationAction = SKAction.animate(with: playerTextures, timePerFrame: 0.041)
@@ -169,7 +170,7 @@ class NewtonScene: SKScene, ObservableObject {
         let initialPosition = CGFloat(arc4random_uniform(132) + 74)
         let enemyNumber = Int(arc4random_uniform(4) + 1)
         // a distância que vai ter entre o de cima e o de baixo
-        let enemiesDistance = self.player.size.height * 2.5
+        let enemiesDistance = 200 * 2.0
         
         // criando o inimigo do topo
         let enemyTop = SKSpriteNode(imageNamed: "enemytop\(enemyNumber)")
@@ -320,20 +321,6 @@ class NewtonScene: SKScene, ObservableObject {
             }
         }
     }
-    
-    
-    
-    // Executado o tempo inteiro no game
-    
-    override func update(_ currentTime: TimeInterval) {
-        // criando um pouquinho de rotação
-        if gameStarted {
-            let yVelocity = player.physicsBody!.velocity.dy * 0.001 as CGFloat
-            player.zRotation = yVelocity
-        }
-    }
-    
-    
 }
 
 // Adicionando o delegate para informar quando rolou o contato
