@@ -68,7 +68,7 @@ struct Data {
     ],
         maxIndex: 10,
         whichViewNavigateTo: AnyView(LevelSelectionView()),
-        image: "davinciBg"
+        image: "newtonBg"
     )
   
     
