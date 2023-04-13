@@ -21,6 +21,7 @@ class DaVinciViewModel: ObservableObject {
     @Published var switchStagePopUp = false
     @Published var endGamePopUp = false
     @Published var backToSelection = false
+    @Published var goToWinDialogue = false
     
     @Published var colorCounter2 = 0
     @Published var colorCounter3 = 0

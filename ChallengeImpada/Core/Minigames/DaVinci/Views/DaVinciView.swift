@@ -16,7 +16,8 @@ struct DaVinciView: View {
     
     var body: some View {
             ZStack {
-                NavigationLink(destination: LevelSelectionView(), isActive: $DaVinciVM.backToSelection) {EmptyView()}
+                NavigationLink(destination: DialogueView(scene: Data().daVinciConclusionScene), isActive: $DaVinciVM.goToWinDialogue) {EmptyView()}
+                
                 VStack(spacing: 128) {
                     if !DaVinciVM.secondStage {
                         HStack(spacing: 112) {
@@ -110,7 +111,7 @@ struct DaVinciView: View {
                     .clearModalBackground()
             }*/
             .sheet(isPresented: $DaVinciVM.endGamePopUp, onDismiss: {
-                DaVinciVM.backToSelection.toggle()
+                DaVinciVM.goToWinDialogue.toggle()
             }, content: {
                 EndGameView()
                     .clearModalBackground()
