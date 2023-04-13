@@ -242,7 +242,7 @@ class NewtonScene: SKScene, ObservableObject {
         //zerando a rotação do player
         player.zRotation = 0
         // colocando a imagem de perdeu
-        player.texture = SKTexture(imageNamed: "playerDead")
+        player.texture = SKTexture(imageNamed: "brokenSpaceship")
         // parando todas as animações, varrendo cada nó
         for node in self.children {
             node.removeAllActions()

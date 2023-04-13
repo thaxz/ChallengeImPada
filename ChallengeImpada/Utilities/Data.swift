@@ -87,7 +87,7 @@ struct Data {
         ],
         maxIndex: 9,
         whichViewNavigateTo: AnyView(NewtonView()),
-        image: "newtonBg"
+        image: "newtonBgDialogue"
     )
     
     let newtonConclusionScene: DialogueScene = DialogueScene(
@@ -108,7 +108,7 @@ struct Data {
         ],
         maxIndex: 12,
         whichViewNavigateTo: AnyView(LevelSelectionView()),
-        image: "newtonBg"
+        image: "newtonBgDialogue"
     )
     
     let turingOnboardingScene: DialogueScene = DialogueScene(

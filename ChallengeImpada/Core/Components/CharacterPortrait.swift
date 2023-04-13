@@ -18,7 +18,7 @@ struct CharacterPortrait: View {
         
         switch character.name {
         case "Leonardo da Vinci":
-            image = "daVinciPH"
+            image = "davinciPotrait"
             name = "Da Vinci"
         case "Isaac Newton":
             image = "newtonPotrait"
@@ -35,6 +35,9 @@ struct CharacterPortrait: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0){
             Image(image)
+                .resizable()
+                .frame(width: 350, height: 500)
+            
             ZStack(alignment: .center){
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(Color.white)
