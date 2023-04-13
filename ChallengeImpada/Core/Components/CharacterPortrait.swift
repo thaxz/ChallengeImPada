@@ -27,7 +27,7 @@ struct CharacterPortrait: View {
             image = "turingPH"
             name = "Alan Turing"
         default:
-            image = "arquisPH"
+            image = "arquisPotrait"
             name = "ARQUIS"
         }
     }
