@@ -21,7 +21,7 @@ struct CharacterPortrait: View {
             image = "daVinciPH"
             name = "Da Vinci"
         case "Isaac Newton":
-            image = "newtonPH"
+            image = "newtonPotrait"
             name = "Newton"
         case "Alan Turing":
             image = "turingPH"
